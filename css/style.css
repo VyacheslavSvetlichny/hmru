@@ -439,6 +439,7 @@ body {
   .catalog-menu__list {
     padding: 0;
     margin: 0 10px;
+    list-style-type: none;
   }
   .catalog-menu__list > li:not(:last-child) {
     border-bottom: 1px solid #e7e7e7;
@@ -587,6 +588,7 @@ body {
     padding: 26px 0 12px;
     gap: 26px;
     box-shadow: 0px -4px 10px 0px rgba(62, 83, 97, 0.1);
+    z-index: 1000;
   }
   .mobile-menu__link.active svg path {
     stroke: #2086cf;
