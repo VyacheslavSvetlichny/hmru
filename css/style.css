@@ -286,11 +286,11 @@ body {
     border-top: 1px solid #e7e7e7;
     left: 0;
     top: 64px;
-    height: calc(100% - 64px);
+    height: calc(100% - 85px);
     width: 100%;
     background: #fff;
     z-index: 150;
-    padding: 20px 0 85px;
+    padding: 20px 0 0;
     overflow: auto;
     pointer-events: all;
   }
@@ -324,13 +324,12 @@ body {
     border-top: 1px solid #e7e7e7;
     left: 0;
     top: 64px;
-    height: calc(100% - 64px);
+    height: calc(100% - 170px);
     width: 100%;
     background: #fff;
     z-index: 150;
     padding: 4px 0 85px;
     overflow: auto;
-    pointer-events: all;
   }
   .menu_nav .popular-sections li a {
     color: #50575b;
@@ -352,14 +351,15 @@ body {
     text-transform: uppercase;
     border-radius: 8px;
   }
+  .menu_nav {
+    height: calc(100% - 90px);
+    overflow-y: auto;
+  }
   .menu_nav__holder {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0 20px;
-    max-height: 400px;
-    overflow-y: auto;
-    border-bottom: 1px solid #e7e7e7;
   }
   .menu_nav__holder span {
     transition: all 0.3s ease;
@@ -412,10 +412,17 @@ body {
     color: #2086cf;
   }
   .mobile-menu__container {
+    position: absolute;
     display: flex;
     align-items: center;
     padding: 20px 20px;
     justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 151;
+    background-color: #fff;
+    border-top: 1px solid #e7e7e7;
   }
   .mobile-phone {
     color: #929ea6;
