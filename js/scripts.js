@@ -14,6 +14,8 @@ $(function () {
     $('.cross').toggleClass('hide')
     $('.burger').removeClass('is_active')
     $('.burger').addClass('not_active')
+    $('.burger-menu').removeClass('active')
+    $('.catalog-menu').toggleClass('active')
   })
 
   $(document).on(
@@ -21,6 +23,12 @@ $(function () {
     '.search-mobile__btn, .main_search_block_in .close',
     function () {
       $('#search-popup').toggleClass('show')
+      $('.burger').removeClass('is_active')
+      $('.burger').addClass('not_active')
+      $('.burger-menu').removeClass('active')
+      $('.catalog-menu').removeClass('active')
+      $('.basket').removeClass('hide')
+      $('.cross').addClass('hide')
     },
   )
 
@@ -28,5 +36,31 @@ $(function () {
     $(this).toggleClass('active')
     $(this).children('.more_nav_in').slideToggle()
     $('.popular-sections').slideToggle()
+  })
+
+  $(document).on('click', '.catalog-menu__item', function () {
+    $(this).parent().toggleClass('opened')
+    $(this).siblings('.catalog-sub-menu').slideToggle()
+  })
+
+  $(function () {
+    const popularSlider = new Swiper('.catalog-popular__container', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 2.25,
+        },
+
+        576: {
+          slidesPerView: 2.25,
+        },
+
+        992: {
+          slidesPerView: 3,
+        },
+      },
+    })
   })
 })
