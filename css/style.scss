@@ -782,6 +782,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 12px;
 
     h1 {
       margin: 0;
@@ -827,7 +828,7 @@ body {
     display: none;
     align-items: stretch;
     flex-wrap: wrap;
-    margin: 12px -5px 0;
+    margin: 0 -5px 0;
 
     .catalog-content__item {
       flex: 0 0 calc(50% - 10px);
@@ -875,5 +876,11 @@ body {
 
   .catalog-content.catalog-list {
     display: none;
+    background: #f7f8fa;
+    border-radius: 15px;
+
+    .discount span {
+      color: #dc2a2a;
+    }
   }
 }
