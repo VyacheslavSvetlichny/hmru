@@ -21,6 +21,12 @@ $(function () {
     $('.catalog-menu').removeClass('active')
     $('.basket').removeClass('hide')
     $('.cross').addClass('hide')
+
+    if ($(this).hasClass('is_active')) {
+      $('body').addClass('locked')
+    } else if ($(this).hasClass('not_active')) {
+      $('body').removeClass('locked')
+    }
   })
 
   $(document).on('click', '#show-catalog-mobile', function () {
@@ -31,6 +37,12 @@ $(function () {
     $('.burger').addClass('not_active')
     $('.burger-menu').removeClass('active')
     $('.catalog-menu').toggleClass('active')
+
+    if ($('.basket').hasClass('hide')) {
+      $('body').addClass('locked')
+    } else if ($('.cross').hasClass('hide')) {
+      $('body').removeClass('locked')
+    }
   })
 
   $(document).on(
@@ -44,6 +56,12 @@ $(function () {
       $('.catalog-menu').removeClass('active')
       $('.basket').removeClass('hide')
       $('.cross').addClass('hide')
+
+      if ($('#search-popup').hasClass('show')) {
+        $('body').addClass('locked')
+      } else {
+        $('body').removeClass('locked')
+      }
     },
   )
 
