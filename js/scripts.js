@@ -43,24 +43,33 @@ $(function () {
     $(this).siblings('.catalog-sub-menu').slideToggle()
   })
 
-  $(function () {
-    const popularSlider = new Swiper('.catalog-popular__container', {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      loop: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 2.25,
-        },
+  $(document).on('click', '.catalog-type__btn', function () {
+    $('.catalog-type__btn').removeClass('active')
+    $(this).addClass('active')
+    $('.catalog-content').removeClass('active')
+    $(
+      `.catalog-content[data-catalog-view="${$(this).attr(
+        'data-catalog-view',
+      )}"`,
+    ).addClass('active')
+  })
 
-        576: {
-          slidesPerView: 2.25,
-        },
-
-        992: {
-          slidesPerView: 3,
-        },
+  const popularSlider = new Swiper('.catalog-popular__container', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2.25,
       },
-    })
+
+      576: {
+        slidesPerView: 2.25,
+      },
+
+      992: {
+        slidesPerView: 3,
+      },
+    },
   })
 })
