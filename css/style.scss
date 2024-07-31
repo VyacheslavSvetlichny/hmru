@@ -545,11 +545,16 @@ body {
       align-items: center;
       justify-content: space-between;
       padding: 16px 10px;
-      color: #50575b;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+
+      span,
+      a {
+        color: #50575b;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: unset;
+      }
     }
 
     &__arrow {
@@ -649,6 +654,7 @@ body {
       font-weight: 400;
       line-height: normal;
       margin-bottom: 2px;
+      text-decoration: unset;
     }
 
     &__bottom {

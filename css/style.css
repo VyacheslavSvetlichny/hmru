@@ -466,11 +466,15 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 16px 10px;
+  }
+  .catalog-menu__item span,
+  .catalog-menu__item a {
     color: #50575b;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-decoration: unset;
   }
   .catalog-menu__arrow {
     display: none;
@@ -551,6 +555,7 @@ body {
     font-weight: 400;
     line-height: normal;
     margin-bottom: 2px;
+    text-decoration: unset;
   }
   .catalog-popular__bottom {
     display: flex;

@@ -53,9 +53,9 @@ $(function () {
     $('.popular-sections').slideToggle()
   })
 
-  $(document).on('click', '.catalog-menu__item', function () {
-    $(this).parent().toggleClass('opened')
-    $(this).siblings('.catalog-sub-menu').slideToggle()
+  $(document).on('click', '.catalog-menu__arrow', function () {
+    $(this).parent().parent().toggleClass('opened')
+    $(this).parent().siblings('.catalog-sub-menu').slideToggle()
   })
 
   $(document).on('click', '.catalog-type__btn', function () {
