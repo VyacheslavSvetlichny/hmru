@@ -813,30 +813,43 @@ body {
 
   .catalog-content {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    // margin: 0 -5px;
+    margin: 12px -5px 0;
 
     &__item {
-      flex: 0 0 50%;
+      flex: 0 0 calc(50% - 10px);
+      min-height: 160px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      // padding: 15px 30px;
-      // margin: 0 5px;
+      padding: 15px 28px;
+      margin: 0 5px 10px;
       border-radius: 15px;
       border: 1px solid #e7e7e7;
+      box-sizing: border-box;
+      text-decoration: unset;
+
+      &.discount .catalog-content__title {
+        color: #dc2a2a;
+      }
     }
 
     &__img {
-      display: none;
       height: 85px;
       width: auto;
       margin: 0 auto;
     }
 
     &__title {
-      display: none;
+      color: #50575b;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      word-wrap: break-word;
+      hyphens: auto;
     }
   }
 }
