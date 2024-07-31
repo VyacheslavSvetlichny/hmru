@@ -1,3 +1,18 @@
+if (localStorage.getItem('catalog-view')) {
+  $('.catalog-type__btn').removeClass('active')
+  $(
+    '.catalog-type__btn[data-catalog-view=' +
+      localStorage.getItem('catalog-view') +
+      ']',
+  ).addClass('active')
+  $('.catalog-content').removeClass('active')
+  $(
+    '.catalog-content[data-catalog-view=' +
+      localStorage.getItem('catalog-view') +
+      ']',
+  ).addClass('active')
+}
+
 $(function () {
   $(document).on('click', '.burger', function () {
     $(this).toggleClass('is_active')
@@ -52,6 +67,8 @@ $(function () {
         'data-catalog-view',
       )}"`,
     ).addClass('active')
+
+    localStorage.setItem('catalog-view', $(this).attr('data-catalog-view'))
   })
 
   const popularSlider = new Swiper('.catalog-popular__container', {
