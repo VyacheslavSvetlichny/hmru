@@ -810,4 +810,33 @@ body {
       }
     }
   }
+
+  .catalog-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // margin: 0 -5px;
+
+    &__item {
+      flex: 0 0 33.3%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // padding: 15px 30px;
+      // margin: 0 5px;
+      border-radius: 15px;
+      border: 1px solid #e7e7e7;
+    }
+
+    &__img {
+      display: none;
+      height: 85px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    &__title {
+      display: none;
+    }
+  }
 }
