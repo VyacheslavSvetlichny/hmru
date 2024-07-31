@@ -330,6 +330,7 @@ body {
     z-index: 150;
     padding: 4px 0 85px;
     overflow: auto;
+    pointer-events: all;
   }
   .menu_nav .popular-sections li a {
     color: #50575b;
