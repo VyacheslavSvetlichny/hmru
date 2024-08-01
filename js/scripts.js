@@ -107,4 +107,16 @@ $(function () {
       },
     },
   })
+
+  $(function () {
+    $('.news-form__input input').each(function () {
+      $(this).on('input', function () {
+        if ($(this).val().length > 0) {
+          $(this).parent().addClass('filled')
+        } else {
+          $(this).parent().removeClass('filled')
+        }
+      })
+    })
+  })
 })
