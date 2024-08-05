@@ -119,4 +119,20 @@ $(function () {
       })
     })
   })
+
+  $(function () {
+    $('.personal-burger, .personal-menu .close').click(function () {
+      $('.personal-menu').toggleClass('opened')
+      $('body').toggleClass('locked')
+    })
+  })
+
+  $(function () {
+    $('.personal-menu ul li.has-sub-menu .personal-menu__item').click(
+      function () {
+        $(this).toggleClass('active')
+        $(this).siblings('ul').slideToggle()
+      },
+    )
+  })
 })
