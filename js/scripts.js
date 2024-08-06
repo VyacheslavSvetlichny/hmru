@@ -121,6 +121,18 @@ $(function () {
   })
 
   $(function () {
+    $('.personal-input input').each(function () {
+      $(this).on('input', function () {
+        if ($(this).val().length > 0) {
+          $(this).parent().addClass('filled')
+        } else {
+          $(this).parent().removeClass('filled')
+        }
+      })
+    })
+  })
+
+  $(function () {
     $('.personal-burger, .personal-menu .close').click(function () {
       $('.personal-menu').toggleClass('opened')
       $('body').toggleClass('locked')
