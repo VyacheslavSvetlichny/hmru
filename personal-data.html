@@ -9,13 +9,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="fonts/font-awesome.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="css/style.css" />
     <title>hmru</title>
   </head>
@@ -1434,264 +1427,55 @@
                 />
               </svg>
             </button>
-            <h1>Адреса доставок</h1>
+            <h1>Личные данные</h1>
           </div>
-          <div class="payment-details">
-            <ul class="payment-details__list">
-              <li class="payment-details__item selected">
-                <div class="payment-company">
-                  <div class="payment-company__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M13.2373 5.56896C13.2373 7.64045 11.5617 9.31973 9.49478 9.31973C7.42784 9.31973 5.75225 7.64045 5.75225 5.56896C5.75225 3.49746 7.42784 1.81818 9.49478 1.81818C11.5617 1.81818 13.2373 3.49746 13.2373 5.56896ZM15.0515 5.56896C15.0515 8.6446 12.5637 11.1379 9.49478 11.1379C6.42589 11.1379 3.93807 8.6446 3.93807 5.56896C3.93807 2.49331 6.42589 0 9.49478 0C12.5637 0 15.0515 2.49331 15.0515 5.56896ZM1.66337 18.7275C3.5398 15.8892 6.58679 14.0718 10 14.0718C13.4132 14.0718 16.4602 15.8892 18.3366 18.7275C18.6133 19.1461 19.1762 19.2606 19.5938 18.9833C20.0114 18.706 20.1257 18.1419 19.849 17.7233C17.6729 14.4317 14.0847 12.2536 10 12.2536C5.91534 12.2536 2.32711 14.4317 0.151012 17.7233C-0.125688 18.1419 -0.0114433 18.706 0.406183 18.9833C0.82381 19.2606 1.38667 19.1461 1.66337 18.7275Z"
-                        fill="#50575B"
-                      />
-                    </svg>
-                  </div>
-                  <div class="payment-company__content">
-                    <div class="payment-company__name">
-                      Анастасия Василисовна
-                    </div>
-                    <a href="#" class="payment-company__phone"
-                      >+7 (923) 100-01-05</a
-                    >
-                    <div class="payment-company__info">
-                      ООО «Мясоперерабатывающая компания»
-                    </div>
-                  </div>
-                </div>
-                <div class="paymnet-address">
-                  <div class="paymnet-address__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15"
-                      height="16"
-                      viewBox="0 0 15 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
-                        fill="#50575B"
-                      />
-                    </svg>
-                  </div>
-                  <div class="paymnet-address__text">
-                    ул. Ленина, дом 18, кв. 20 Прокопьевск, Кемеровская область
-                    – Кузбасс, 630123
-                  </div>
-                </div>
-                <div class="payment-main">
-                  <div class="payment-main__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="11"
-                      viewBox="0 0 22 11"
-                      fill="none"
-                    >
-                      <path
-                        d="M1.5 5.5L5.5 9.5L13.5 1.5"
-                        stroke="#50575B"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M11.5 8L13 9.5L21 1.5"
-                        stroke="#50575B"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="payment-main__text">Основной</div>
-                </div>
-                <div class="payment-details__btns">
-                  <button
-                    data-fancybox
-                    data-src="#delete-modal"
-                    class="payment-details__delete delivery-delete"
-                  >
-                    Удалить
-                  </button>
-                  <a href="#" class="payment-details__submit">Сохранить</a>
-                </div>
-              </li>
-              <li class="payment-details__item">
-                <div class="payment-company">
-                  <div class="payment-company__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M13.2373 5.56896C13.2373 7.64045 11.5617 9.31973 9.49478 9.31973C7.42784 9.31973 5.75225 7.64045 5.75225 5.56896C5.75225 3.49746 7.42784 1.81818 9.49478 1.81818C11.5617 1.81818 13.2373 3.49746 13.2373 5.56896ZM15.0515 5.56896C15.0515 8.6446 12.5637 11.1379 9.49478 11.1379C6.42589 11.1379 3.93807 8.6446 3.93807 5.56896C3.93807 2.49331 6.42589 0 9.49478 0C12.5637 0 15.0515 2.49331 15.0515 5.56896ZM1.66337 18.7275C3.5398 15.8892 6.58679 14.0718 10 14.0718C13.4132 14.0718 16.4602 15.8892 18.3366 18.7275C18.6133 19.1461 19.1762 19.2606 19.5938 18.9833C20.0114 18.706 20.1257 18.1419 19.849 17.7233C17.6729 14.4317 14.0847 12.2536 10 12.2536C5.91534 12.2536 2.32711 14.4317 0.151012 17.7233C-0.125688 18.1419 -0.0114433 18.706 0.406183 18.9833C0.82381 19.2606 1.38667 19.1461 1.66337 18.7275Z"
-                        fill="#50575B"
-                      />
-                    </svg>
-                  </div>
-                  <div class="payment-company__content">
-                    <div class="payment-company__name">Павел Фролов</div>
-                    <a href="#" class="payment-company__phone"
-                      >+7 (923) 100-01-05</a
-                    >
-                    <div class="payment-company__info">Новое агентство</div>
-                  </div>
-                </div>
-                <div class="paymnet-address">
-                  <div class="paymnet-address__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15"
-                      height="16"
-                      viewBox="0 0 15 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
-                        fill="#50575B"
-                      />
-                    </svg>
-                  </div>
-                  <div class="paymnet-address__text">
-                    Красный проспект, дом 18, кв. 20 Новосибирск, Новосибирская
-                    область, 630123
-                  </div>
-                </div>
-                <div class="payment-details__btns">
-                  <button
-                    data-fancybox
-                    data-src="#delete-modal"
-                    class="payment-details__delete delivery-delete"
-                  >
-                    Удалить
-                  </button>
-                  <a href="#" class="payment-details__submit">Редактировать</a>
-                </div>
-              </li>
-            </ul>
-            <a href="#" class="payment-add delivery">
-              <div class="payment-add__ico">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="43"
-                  height="36"
-                  viewBox="0 0 43 36"
-                  fill="none"
-                >
-                  <path
-                    d="M24.5934 7.63627L1.02352 19.2897C0.594304 19.5024 0.357442 19.9747 0.448145 20.4482C0.537939 20.9211 0.931718 21.2741 1.41105 21.3139L14.6245 22.3901L19.2464 34.8155C19.4148 35.2661 19.8614 35.5492 20.3409 35.5073C20.6502 35.4813 20.9228 35.3231 21.1009 35.0879C21.199 34.9583 21.2687 34.806 21.2998 34.6391L26.119 8.79117C26.1928 8.39254 26.036 7.98694 25.713 7.74241C25.39 7.49789 24.957 7.45701 24.5934 7.63627Z"
-                    fill="#BCBCBC"
-                  />
-                  <path
-                    d="M36 16V28"
-                    stroke="#BCBCBC"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M30 22L42 22"
-                    stroke="#BCBCBC"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-              <div class="payment-add__text">Добавить адрес</div>
-            </a>
-            <div class="agent">
-              <div class="agent-head">
-                <div class="agent-logo">
-                  <img src="images/agent-img.png" alt="" />
-                </div>
-                <div class="agent-text">
-                  <div class="agent-text__name">Анастасия Игоревна</div>
-                  <div class="agent-text__post">Представитель HMRU</div>
-                </div>
-              </div>
-              <div class="agent-body">
-                <a href="#" class="agent-link">
-                  <div class="agent-link__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="16"
-                      viewBox="0 0 20 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M18 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0ZM18 4.7L10 10.034L2 4.7V2.297L10 7.63L18 2.297V4.7Z"
-                        fill="#D5DFED"
-                      />
-                    </svg>
-                  </div>
-                  <div class="agent-link__text">anastasia@hmru.ru</div>
-                </a>
-                <a href="#" class="agent-link">
-                  <div class="agent-link__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22ZM7.22789 5.04397C7.55102 5.05703 7.71275 5.07645 7.92605 5.58727C7.99625 5.7567 8.09316 5.99185 8.19917 6.24907C8.49363 6.96354 8.85824 7.84822 8.91536 7.96739C8.99288 8.12912 9.07056 8.34912 8.96056 8.56242C8.86434 8.76701 8.77942 8.86518 8.63792 9.02873C8.62726 9.04105 8.61628 9.05374 8.60495 9.06688C8.53558 9.14746 8.46742 9.21965 8.39941 9.29168C8.30902 9.3874 8.21892 9.48282 8.12663 9.59728L8.11904 9.60617C7.97235 9.77814 7.81304 9.96491 7.99738 10.2827C8.18472 10.5997 8.83114 11.6536 9.78161 12.5006C10.9098 13.5042 11.8415 13.881 12.2615 14.0508C12.2988 14.0659 12.3321 14.0794 12.3611 14.0915C12.6261 14.2015 12.9431 14.1755 13.137 13.9686C13.3469 13.7421 13.5992 13.3881 13.8618 13.0196C13.9066 12.9568 13.9516 12.8935 13.9968 12.8304C14.2165 12.52 14.4944 12.4812 14.7854 12.591C15.0828 12.6945 16.6539 13.4705 16.977 13.6322C17.0431 13.6653 17.1045 13.6949 17.1612 13.7222C17.3817 13.8282 17.5294 13.8992 17.5911 14.0072C17.6688 14.143 17.6688 14.7833 17.4038 15.5335C17.1385 16.2834 16.0848 16.9045 15.2443 17.0855C14.669 17.2082 13.919 17.3054 11.3912 16.2578C8.3978 15.0179 6.39119 12.1089 5.98235 11.5162C5.9497 11.4689 5.92724 11.4363 5.91528 11.4205C5.91076 11.4143 5.90539 11.407 5.89924 11.3985C5.69401 11.1179 4.60938 9.63484 4.60938 8.10283C4.60938 6.5694 5.3667 5.79946 5.70592 5.45459C5.71574 5.44461 5.72521 5.43498 5.7343 5.4257C5.9995 5.15414 6.43898 5.03125 6.85939 5.03125C6.99534 5.03125 7.11789 5.03761 7.22789 5.04397Z"
-                        fill="#D5DFED"
-                      />
-                    </svg>
-                  </div>
-                  <div class="agent-link__text">8 (800) 500-1-495</div>
-                </a>
-                <a href="#" class="agent-link">
-                  <div class="agent-link__ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="19"
-                      viewBox="0 0 22 19"
-                      fill="none"
-                    >
-                      <path
-                        d="M20.214 0.215944L0.723048 7.96788C-0.0612952 8.32885 -0.326588 9.05182 0.533438 9.44415L5.53376 11.083L17.6238 3.37682C18.2839 2.89302 18.9597 3.02203 18.3782 3.55421L7.99447 13.2508L7.66828 17.3544C7.97041 17.988 8.5236 17.991 8.87644 17.6761L11.7493 14.8725L16.6694 18.6723C17.8121 19.3701 18.4339 18.9198 18.6798 17.641L21.907 1.88064C22.242 0.306414 21.6706 -0.387185 20.214 0.215944Z"
-                        fill="#D5DFED"
-                      />
-                    </svg>
-                  </div>
-                  <div class="agent-link__text">anastasia@hmru.ru</div>
-                </a>
-              </div>
+          <form class="payment-form personal-data__form">
+            <div class="personal-input">
+              <input type="text" />
+              <span>Имя</span>
             </div>
-          </div>
+            <div class="personal-input">
+              <input type="text" />
+              <span>Фамилия</span>
+            </div>
+            <div class="personal-input">
+              <input type="text" />
+              <span>Телефон</span>
+            </div>
+            <div class="personal-input">
+              <input type="text" />
+              <span>Электронная почта</span>
+            </div>
+            <div class="personal-input">
+              <input type="text" />
+              <span>Название компании</span>
+            </div>
+            <div class="personal-input">
+              <input type="text" />
+              <span>ИНН</span>
+            </div>
+            <div class="dealer-info">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+              >
+                <path
+                  d="M6.31101 0.545708C6.37314 0.366307 6.62686 0.366308 6.68899 0.545708L7.97877 4.26998C8.0062 4.34919 8.0801 4.40289 8.16391 4.4045L12.1045 4.48028C12.2943 4.48393 12.3727 4.72523 12.2213 4.83976L9.07784 7.21728C9.01098 7.26784 8.98275 7.35472 9.00712 7.43492L10.1527 11.206C10.2079 11.3877 10.0027 11.5368 9.84695 11.4282L6.61442 9.17332C6.54568 9.12536 6.45432 9.12536 6.38558 9.17332L3.15305 11.4282C2.99734 11.5368 2.79208 11.3877 2.84726 11.206L3.99288 7.43492C4.01725 7.35472 3.98902 7.26784 3.92216 7.21728L0.778732 4.83976C0.627311 4.72523 0.705713 4.48393 0.895533 4.48028L4.83609 4.4045C4.9199 4.40289 4.9938 4.34919 5.02123 4.26998L6.31101 0.545708Z"
+                  fill="#BB5A13"
+                />
+              </svg>
+              Вы являетесь дилером
+            </div>
+            <div class="form-btns">
+              <a href="#" class="form-submit">Сохранить</a>
+              <p>Изменения сохранены</p>
+            </div>
+          </form>
         </div>
       </main>
-      <div style="display: none" id="delete-modal">
-        <div class="delete-modal__text">
-          Уверены, что хотите удалить этот адрес? Если у вас есть доставка с
-          этим адресом – товар все равно приедет как положено.
-        </div>
-        <div class="delete-modal__btns">
-          <button class="delete-modal__cancel">Оставить</button>
-          <button class="delete-modal__confirm">Удалить</button>
-        </div>
-      </div>
     </div>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
@@ -1702,6 +1486,8 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/inputmask.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

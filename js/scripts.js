@@ -147,4 +147,10 @@ $(function () {
       },
     )
   })
+
+  $(function () {
+    $('.delete-modal__cancel').click(function () {
+      $.fancybox.close()
+    })
+  })
 })
