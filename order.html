@@ -1,0 +1,2992 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="fonts/font-awesome.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <title>hmru</title>
+  </head>
+  <body class="personal">
+    <div class="wrapper">
+      <div class="mobile-header">
+        <div class="container">
+          <div class="burger not_active">
+            <span></span>
+          </div>
+          <button class="header-notification_count">
+            <div class="header-notification__ico">
+              <svg
+                width="19"
+                height="21"
+                viewBox="0 0 19 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.1 21C8.65737 21.0007 9.20111 20.8277 9.65564 20.5051C10.1102 20.1826 10.4529 19.7264 10.6362 19.2H5.5638C5.7471 19.7264 6.08983 20.1826 6.54436 20.5051C6.99889 20.8277 7.54263 21.0007 8.1 21ZM14.4 14.3274V10.2C14.4 7.3047 12.4335 4.8657 9.7695 4.1322C9.5058 3.468 8.8614 3 8.1 3C7.3386 3 6.6942 3.468 6.4305 4.1322C3.7665 4.8666 1.8 7.3047 1.8 10.2V14.3274L0.263701 15.8637C0.179963 15.9471 0.113554 16.0463 0.0682968 16.1555C0.0230401 16.2647 -0.000170504 16.3818 9.42906e-07 16.5V17.4C9.42906e-07 17.6387 0.0948221 17.8676 0.263605 18.0364C0.432388 18.2052 0.661306 18.3 0.900001 18.3H15.3C15.5387 18.3 15.7676 18.2052 15.9364 18.0364C16.1052 17.8676 16.2 17.6387 16.2 17.4V16.5C16.2002 16.3818 16.177 16.2647 16.1317 16.1555C16.0864 16.0463 16.02 15.9471 15.9363 15.8637L14.4 14.3274Z"
+                  fill="#2086CF"
+                ></path>
+                <circle
+                  cx="14"
+                  cy="5"
+                  r="4"
+                  fill="#F23131"
+                  stroke="white"
+                  stroke-width="2"
+                ></circle>
+              </svg>
+            </div>
+            <div class="header-notification__text">3</div>
+          </button>
+          <a href="/" class="logo-mobile">
+            <img src="images/logo.png" alt="logo" />
+          </a>
+          <button id="show-catalog-mobile">
+            <svg
+              class="basket"
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="15"
+              viewBox="0 0 21 15"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 0H20V2H0V0ZM0 6H8V8H0V6ZM8 12H0V14H10L8 12ZM15 12C16.6569 12 18 10.6569 18 9C18 7.34315 16.6569 6 15 6C13.3431 6 12 7.34315 12 9C12 10.6569 13.3431 12 15 12ZM19.1716 11.7574C19.6951 10.9669 20 10.0191 20 9C20 6.23858 17.7614 4 15 4C12.2386 4 10 6.23858 10 9C10 11.7614 12.2386 14 15 14C16.0191 14 16.967 13.6951 17.7574 13.1716L19.1213 14.5355L20.5355 13.1213L19.1716 11.7574Z"
+                fill="white"
+              />
+            </svg>
+            <svg
+              class="cross hide"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="6.10352e-05"
+                y="14.1421"
+                width="20"
+                height="2"
+                transform="rotate(-45 6.10352e-05 14.1421)"
+                fill="white"
+              />
+              <rect
+                x="1.41422"
+                width="20"
+                height="2"
+                transform="rotate(45 1.41422 0)"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <button class="search-mobile__btn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.4732 16.8876C13.8414 18.2087 11.7631 19 9.5 19C4.2533 19 0 14.7467 0 9.5C0 4.2533 4.2533 0 9.5 0C14.7467 0 19 4.2533 19 9.5C19 11.7632 18.2086 13.8415 16.8875 15.4734L19.9496 18.5355L18.5354 19.9497L15.4732 16.8876ZM17 9.5C17 13.6421 13.6422 17 9.5 17C5.35786 17 2 13.6421 2 9.5C2 5.35786 5.35786 2 9.5 2C13.6422 2 17 5.35786 17 9.5Z"
+                fill="#50575B"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="search-popup">
+        <form class="main_search_block" action="/catalog/" id="title-search">
+          <input type="hidden" name="human" value="no_bot" />
+          <div class="main_search_block_in">
+            <input
+              type="text"
+              placeholder="Поиск оборудования и запчастей"
+              name="q"
+              value=""
+              data-entity="search-input"
+            />
+            <span class="clear"></span>
+            <button value="submit"></button>
+            <div class="close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <rect
+                  x="6.10352e-05"
+                  y="14.1421"
+                  width="20"
+                  height="2"
+                  transform="rotate(-45 6.10352e-05 14.1421)"
+                  fill="#50575B"
+                />
+                <rect
+                  x="1.41418"
+                  width="20"
+                  height="2"
+                  transform="rotate(45 1.41418 0)"
+                  fill="#50575B"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="main_search_block_in_result" data-entity="search-result">
+            <div class="main_search_block_in_result_in">
+              <a
+                href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/"
+                class="link_section"
+              >
+                <div class="link_section">Картофелечистки</div>
+              </a>
+              <a
+                href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/kartofelechistka_pp15/"
+              >
+                <div class="link-photo">
+                  <img src="images/search1.png" alt="" />
+                </div>
+                <div class="link-text">
+                  <b>Автомат</b>ическая горизонтальная упаковочная машина
+                  DXDZ-250D
+                </div>
+              </a>
+              <a
+                href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/kartofelechistka_pp15/"
+              >
+                <div class="link-photo">
+                  <img src="images/search2.png" alt="" />
+                </div>
+                <div><b>Автомат</b>ическая упаковочная DXDZ-250D</div>
+              </a>
+              <a
+                href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/kartofelechistka_pp15/"
+              >
+                <div class="link-photo">
+                  <img src="images/search3.png" alt="" />
+                </div>
+                <div><b>Автомат</b>ическая горизонтальная упаковочная DXDZ</div>
+              </a>
+            </div>
+            <p class="show_all_res">
+              <a href="">Все результаты</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="burger-menu">
+        <div class="burger-menu__content">
+          <div class="menu_nav">
+            <ul class="popular-sections">
+              <li>
+                <a
+                  class=""
+                  target="_blank"
+                  href="/catalog/fasovochno_upakovochnoe_oborudovanie_1/"
+                >
+                  Фасовочно-упаковочное
+                </a>
+              </li>
+              <li>
+                <a
+                  class=""
+                  target="_blank"
+                  href="/catalog/myasopererabatyvayushchee_oborudovanie/"
+                >
+                  Мясоперерабатывающее
+                </a>
+              </li>
+              <li>
+                <a
+                  class=""
+                  target="_blank"
+                  href="/catalog/inspektsionnoe_oborudovanie/"
+                >
+                  Инспекционное
+                </a>
+              </li>
+              <li>
+                <a
+                  class=""
+                  target="_blank"
+                  href="/catalog/zapasnye_chasti_i_raskhodnye_materialy/"
+                >
+                  Запчасти и расходники
+                </a>
+              </li>
+              <li>
+                <a
+                  class="very-popular"
+                  target="_blank"
+                  href="/catalog/special_price/"
+                >
+                  Special Price
+                </a>
+              </li>
+            </ul>
+            <div class="menu_nav__holder">
+              <a href="/about/" class=""> О компании </a>
+              <a href="/catalog/" class=""> Каталог </a>
+              <a href="/service/" class=""> Сервисная служба </a>
+              <a href="/news/" class=""> Новости </a>
+              <a href="/contacts/" class=""> Контакты </a>
+              <div class="more_nav">
+                <span>Ещё</span>
+                <div class="more_nav__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="more_nav_in">
+                  <div class="more_nav_in_in">
+                    <a href="/complite_solutions/" class="desk_l_nav">
+                      Готовые решения </a
+                    ><a href="/articles/" class="desk_l_nav"> Статьи </a>
+                    <a href="/lizing/" class=""> Лизинг </a>
+                    <a href="/consultation/" class=""> Видеоконсультация </a>
+                    <a href="/delivery/" class=""> Доставка и оплата </a>
+                    <a href="/dealers/" class=""> Дилерам </a>
+
+                    <a href="/career/" class=""> Карьера </a>
+
+                    <a href="/reviews/" class=""> Отзывы </a>
+                    <a href="/faq/" class=""> FAQ </a>
+                    <a
+                      href="/local/assets/Оборудование для HoReCa и пищевое Hualian.pdf"
+                      class=""
+                    >
+                      Каталог пищевого оборудования
+                    </a>
+                    <a
+                      href="/local/assets/Каталог упаковочного оборудования Hualian Machinery.pdf"
+                      class=""
+                    >
+                      Каталог упаковочного оборудования
+                    </a>
+                    <a
+                      href="/local/assets/Каталог мясоперерабатывающего оборудования Hualian Machinery.pdf"
+                      class=""
+                    >
+                      Каталог мясоперерабатывающего оборудования
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-menu__container">
+            <div class="mobile-menu__container_left">
+              <div class="mobile-phones">
+                <a href="#" class="mobile-tg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="16"
+                    viewBox="0 0 18 16"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.6824 0.176419L0.69876 6.63146C0.69876 6.63146 -0.054178 6.90112 0.00311092 7.38988C0.0603998 7.87865 0.682393 8.10618 0.682393 8.10618L4.7008 9.49662L14.3581 3.18484C14.3581 3.18484 14.9146 2.83933 14.8982 3.18484C14.8982 3.18484 14.9964 3.24383 14.7018 3.53034C14.4072 3.81686 7.11511 10.5584 7.11511 10.5584L7.10693 10.6511L7.09056 10.6343L6.59133 15.168C6.8123 15.2691 7.01691 15.109 7.01691 15.109L9.61946 12.6736L13.6706 15.8674C14.7673 16.3562 15.1601 15.3365 15.1601 15.3365L18 0.564058C18 -0.413468 16.6824 0.176419 16.6824 0.176419Z"
+                      fill="#50575B"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="mobile-menu__phone">8 800 500-14-95</a>
+              </div>
+              <div class="mobile-menu__additional">
+                <div class="mobile-course">
+                  <div class="mobile-course__ico">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="15"
+                        cy="15"
+                        r="15"
+                        fill="url(#paint0_radial_244_1482)"
+                      />
+                      <path
+                        d="M14.208 21.096C13.1093 21 12.2827 20.648 11.728 20.04C11.184 19.432 10.8747 18.552 10.8 17.4H12.4C12.464 18.104 12.6347 18.632 12.912 18.984C13.2 19.336 13.632 19.5547 14.208 19.64V15.816C13.8027 15.7093 13.4027 15.5813 13.008 15.432C12.624 15.2827 12.2773 15.096 11.968 14.872C11.6693 14.6373 11.424 14.3493 11.232 14.008C11.0507 13.656 10.96 13.224 10.96 12.712C10.96 11.9227 11.232 11.2507 11.776 10.696C12.32 10.1413 13.1307 9.81067 14.208 9.704V8.2H15.552V9.704C16.6187 9.8 17.408 10.136 17.92 10.712C18.432 11.2773 18.7253 12.0667 18.8 13.08H17.2C17.1253 12.504 16.9653 12.0613 16.72 11.752C16.4853 11.4427 16.096 11.2453 15.552 11.16V14.664C15.968 14.7813 16.3787 14.9147 16.784 15.064C17.1893 15.2027 17.552 15.3947 17.872 15.64C18.2027 15.8853 18.464 16.1947 18.656 16.568C18.8587 16.9307 18.96 17.3893 18.96 17.944C18.96 18.7973 18.6773 19.512 18.112 20.088C17.5573 20.664 16.704 21 15.552 21.096V22.6H14.208V21.096ZM12.528 12.712C12.528 13.1493 12.688 13.4853 13.008 13.72C13.328 13.9547 13.728 14.1467 14.208 14.296V11.16C13.632 11.2453 13.2053 11.432 12.928 11.72C12.6613 11.9973 12.528 12.328 12.528 12.712ZM17.392 17.928C17.392 17.6827 17.344 17.4693 17.248 17.288C17.152 17.1067 17.0187 16.952 16.848 16.824C16.688 16.6853 16.496 16.568 16.272 16.472C16.048 16.3653 15.808 16.2693 15.552 16.184V19.64C16.192 19.5547 16.656 19.352 16.944 19.032C17.2427 18.712 17.392 18.344 17.392 17.928Z"
+                        fill="#50575B"
+                      />
+                      <defs>
+                        <radialGradient
+                          id="paint0_radial_244_1482"
+                          cx="0"
+                          cy="0"
+                          r="1"
+                          gradientUnits="userSpaceOnUse"
+                          gradientTransform="translate(15 15) rotate(90) scale(30)"
+                        >
+                          <stop stop-color="#F4F4F4" />
+                          <stop offset="1" stop-color="#E7E7E7" />
+                        </radialGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="mobile-course__text">78,4 <span>₽</span></div>
+                </div>
+                <a href="#" class="hm-video_mobile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="22"
+                    viewBox="0 0 25 22"
+                    fill="none"
+                  >
+                    <path
+                      d="M24.0768 14.0768C22.5352 19.8299 15.9689 23.0691 9.41038 21.3117C2.85189 19.5544 -1.21517 13.466 0.326362 7.71293C1.86789 1.95986 8.43426 -1.27931 14.9928 0.478034C21.5512 2.23538 25.6183 8.32377 24.0768 14.0768Z"
+                      fill="#2ECDFF"
+                    />
+                    <circle
+                      cx="12.5098"
+                      cy="11.216"
+                      r="10.7843"
+                      fill="#2086CF"
+                    />
+                    <circle cx="22" cy="1.72576" r="1.29412" fill="#2086CF" />
+                    <circle
+                      cx="5.1765"
+                      cy="18.1178"
+                      r="1.29412"
+                      fill="#2086CF"
+                    />
+                    <circle
+                      cx="1.29412"
+                      cy="20.7062"
+                      r="1.29412"
+                      fill="#2ECDFF"
+                    />
+                    <circle
+                      cx="6.47046"
+                      cy="19.8429"
+                      r="2.15686"
+                      fill="#2086CF"
+                    />
+                    <path
+                      d="M16.1864 10.3495C16.8531 10.7344 16.8531 11.6967 16.1864 12.0816L11.4217 14.8325C10.755 15.2174 9.92169 14.7362 9.92169 13.9664L9.9217 8.46463C9.9217 7.69483 10.755 7.2137 11.4217 7.5986L16.1864 10.3495Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <span>hmruvideo</span>
+                </a>
+              </div>
+            </div>
+            <div class="mobile-menu__container_right">
+              <a href="#" class="mobile-menu__callback">
+                <svg
+                  width="46"
+                  height="46"
+                  viewBox="0 0 46 46"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="45"
+                    height="45"
+                    rx="22.5"
+                    stroke="#E6E6E6"
+                  />
+                  <path
+                    d="M31.487 28.1402L27.422 24.4442C27.2299 24.2696 26.9774 24.1764 26.7178 24.1845C26.4583 24.1925 26.212 24.3011 26.031 24.4872L23.638 26.9482C23.062 26.8382 21.904 26.4772 20.712 25.2882C19.52 24.0952 19.159 22.9342 19.052 22.3622L21.511 19.9682C21.6974 19.7874 21.8061 19.5411 21.8142 19.2814C21.8222 19.0218 21.7289 18.7693 21.554 18.5772L17.859 14.5132C17.6841 14.3206 17.4409 14.2037 17.1812 14.1875C16.9214 14.1713 16.6656 14.2569 16.468 14.4262L14.298 16.2872C14.1251 16.4608 14.0219 16.6917 14.008 16.9362C13.993 17.1862 13.707 23.1082 18.299 27.7022C22.305 31.7072 27.323 32.0002 28.705 32.0002C28.907 32.0002 29.031 31.9942 29.064 31.9922C29.3085 31.9786 29.5393 31.8749 29.712 31.7012L31.572 29.5302C31.742 29.3333 31.8283 29.0776 31.8124 28.8179C31.7965 28.5582 31.6798 28.315 31.487 28.1402Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-menu">
+        <div class="catalog-menu__content">
+          <ul class="catalog-menu__list">
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Фасовочно-упаковочное</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-sub-menu">
+                <ul class="catalog-sub-menu__list">
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="catalog-popular">
+                  <div class="catalog-popular__title">Популярные товары</div>
+                  <div class="catalog-popular__container swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Фасовочно-упаковочное</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-sub-menu">
+                <ul class="catalog-sub-menu__list">
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                  <li class="catalog-sub-menu__item">
+                    <a href="#">
+                      <img src="images/search1.png" alt="" />
+                      <span>Однокамерные вакуумные упаковщики</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="catalog-popular">
+                  <div class="catalog-popular__title">Популярные товары</div>
+                  <div class="catalog-popular__container swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide catalog-popular__item">
+                        <div class="catalog-popular__image">
+                          <img src="images/popular.png" alt="" />
+                        </div>
+                        <a href="#" class="catalog-popular__product">
+                          Автоматическая горизонтальная упаковочная машина
+                          DXDZ-250D
+                        </a>
+                        <div class="catalog-popular__bottom">
+                          <div class="catalog-popular__price">527 182,80₽</div>
+                          <a href="#" class="catalog-popular__buy">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="40"
+                              height="40"
+                              viewBox="0 0 40 40"
+                              fill="none"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="39"
+                                height="39"
+                                rx="19.5"
+                                stroke="#E7E7E7"
+                              />
+                              <path
+                                d="M12.9346 14.3672H28.4707L27.5012 18.9509C27.186 20.4406 26.0129 21.599 24.5193 21.8952L16.3874 23.508C15.9176 23.6012 15.4517 23.3304 15.3002 22.876L12.1067 13.3003C11.8477 12.5238 11.1209 12 10.3022 12H9.00024"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <ellipse
+                                cx="14.6151"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                              <ellipse
+                                cx="24.3079"
+                                cy="27.9231"
+                                rx="2.07692"
+                                ry="2.07692"
+                                fill="#50575B"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Мясоперерабатывающее</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">
+                  <span>Пищевое</span>
+                </a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">
+                  <span>HoReCa</span>
+                </a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Маркировочное</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">
+                  <span>Складское</span>
+                </a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Инспекционное</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Расходные материалы</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Расходные материалы</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="catalog-menu__item has-sub-menu">
+                <a href="#">Расходные материалы</a>
+                <div class="catalog-menu__arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 1L4 3.55078L1 1"
+                      stroke="#50575B"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-menu__link" onclick="location.href='/favorite/';">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+          >
+            <circle
+              cx="7.13829"
+              cy="3.97228"
+              r="2.97228"
+              stroke="#50575B"
+              stroke-width="2"
+            />
+            <path
+              d="M14.0002 12.9998C12.5517 10.8136 10.1801 9.38867 7.50009 9.38867C4.82013 9.38867 2.44849 10.8136 1 12.9998"
+              stroke="#50575B"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <a href="/personal/">Кабинет</a>
+        </div>
+        <div
+          class="mobile-menu__link favorite"
+          onclick="location.href='/favorite/';"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="13"
+            height="15"
+            viewBox="0 0 13 15"
+            fill="none"
+          >
+            <path
+              d="M10.2343 1H2C1.44772 1 1 1.44772 1 2V12.1511C1 12.9458 1.88227 13.423 2.54737 12.988L5.59502 10.9946C5.91458 10.7856 6.32525 10.7769 6.65346 10.972L9.72328 12.7973C10.3899 13.1936 11.2343 12.7133 11.2343 11.9377V2C11.2343 1.44772 10.7866 1 10.2343 1Z"
+              stroke="#50575B"
+              stroke-width="2"
+            />
+          </svg>
+          <span class="favorite-count--js">0</span>
+          <a href="/favorite/">Избранное</a>
+        </div>
+        <div
+          class="mobile-menu__link compare"
+          onclick="location.href='/catalog/compare/';"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="15"
+            viewBox="0 0 16 15"
+            fill="none"
+          >
+            <path
+              d="M14.6208 5.23025V14M7.77384 14V1M1 8.53168V14"
+              stroke="#50575B"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span class="compare-count--js">0</span>
+          <a href="/catalog/compare/">Сравнение</a>
+        </div>
+        <div
+          class="mobile-menu__link cart"
+          onclick="location.href='/personal/cart/';"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="14"
+            viewBox="0 0 18 14"
+            fill="none"
+          >
+            <path
+              d="M5.2859 2.70967H16.5065L15.8062 6.02009C15.5786 7.09602 14.7314 7.93259 13.6527 8.14653L7.77963 9.31133C7.44029 9.37863 7.10385 9.18306 6.9944 8.85488L4.68797 1.93914C4.50092 1.37828 3.976 1 3.38477 1H1"
+              stroke="#4E565A"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <circle cx="6.5" cy="12.5" r="1.5" fill="#4E565A" />
+            <circle cx="13.5" cy="12.5" r="1.5" fill="#4E565A" />
+          </svg>
+          <span class="basket-count--js">0</span>
+          <a href="/personal/cart/">Корзина</a>
+        </div>
+      </div>
+      <div class="personal-menu">
+        <button class="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="39"
+              height="39"
+              rx="5.5"
+              stroke="#2086CF"
+              stroke-opacity="0.1"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M26.3639 15.05L24.9497 13.6357L20 18.5854L15.0503 13.6357L13.6361 15.05L18.5858 19.9997L13.636 24.9495L15.0502 26.3637L20 21.4139L24.9498 26.3637L26.364 24.9495L21.4142 19.9997L26.3639 15.05Z"
+              fill="#2086CF"
+            />
+          </svg>
+        </button>
+        <ul>
+          <li class="has-sub-menu">
+            <div class="personal-menu__item">
+              <div class="personal-menu__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5 0H2C1.46954 0 0.960876 0.210938 0.585815 0.585938C0.210693 0.960938 0 1.46973 0 2V5H2V2H5V0ZM15 0V2H18V5H20V2C20 1.46973 19.7893 0.960938 19.4142 0.585938C19.0391 0.210938 18.5305 0 18 0H15ZM20 15H18V18H15V20H18C18.5305 20 19.0391 19.7891 19.4142 19.4141C19.7893 19.0391 20 18.5303 20 18V15ZM5 20V18H2V15H0V18C0 18.5303 0.210693 19.0391 0.585815 19.4141C0.781738 19.6099 1.0141 19.7612 1.26697 19.8608C1.49823 19.9521 1.74664 20 2 20H5ZM4 4H6V16H4V4ZM7 4H8V16H7V4ZM15 4H16V16H15V4ZM11 4H14V16H11V4ZM9 4H10V16H9V4Z"
+                    fill="#303239"
+                  />
+                </svg>
+              </div>
+              <div class="personal-menu__text">Заказы</div>
+            </div>
+            <ul>
+              <li>
+                <a href="#">Активные заказы</a>
+              </li>
+              <li>
+                <a href="#">Все заказы</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="personal-menu__item">
+              <div class="personal-menu__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="18"
+                  viewBox="0 0 21 18"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19 0.0109191H0V2.01092H2.3L5.58 11.0109C5.78631 11.5945 6.16807 12.0999 6.67294 12.458C7.1778 12.816 7.78106 13.0092 8.4 13.0109H17V11.0109H8.4C8.19449 11.0108 7.99399 10.9474 7.8258 10.8293C7.6576 10.7112 7.52987 10.5442 7.46 10.3509L7 9.01092H16.28C16.714 9.01029 17.1361 8.86849 17.4824 8.60692C17.8288 8.34535 18.0806 7.97821 18.2 7.56092L20 1.28092C20.0406 1.1496 20.0538 1.01132 20.0386 0.874693C20.0234 0.738071 19.9802 0.606049 19.9117 0.48687C19.8432 0.367692 19.7509 0.263917 19.6404 0.182026C19.53 0.100135 19.4039 0.0418868 19.27 0.0109191C19.1806 -0.0036397 19.0894 -0.0036397 19 0.0109191ZM16.25 7.01092H6.25L4.43 2.01092H17.67L16.25 7.01092ZM8.5 17.0109C9.32843 17.0109 10 16.3393 10 15.5109C10 14.6824 9.32843 14.0109 8.5 14.0109C7.67157 14.0109 7 14.6824 7 15.5109C7 16.3393 7.67157 17.0109 8.5 17.0109ZM16 15.5109C16 16.3393 15.3284 17.0109 14.5 17.0109C13.6716 17.0109 13 16.3393 13 15.5109C13 14.6824 13.6716 14.0109 14.5 14.0109C15.3284 14.0109 16 14.6824 16 15.5109Z"
+                    fill="#303239"
+                  />
+                </svg>
+              </div>
+              <div class="personal-menu__text">Мои товары</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="personal-menu__item">
+              <div class="personal-menu__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2 0H18C19.103 0 20 0.896973 20 2V15C20 16.103 19.103 17 18 17H13L10 20L7 17H2C0.896973 17 0 16.103 0 15V2C0 0.896973 0.896973 0 2 0ZM10 17L12 15H18.002L18 2H2V15H8L10 17ZM12 6C12 7.15198 11.1509 8 10 8C8.8501 8 8 7.15198 8 6C8 4.84802 8.8501 4 10 4C11.1509 4 12 4.84802 12 6ZM6 12.6C6 10.6121 7.79102 9 10 9C12.209 9 14 10.6121 14 12.6V12.986H6V12.6Z"
+                    fill="#303239"
+                  />
+                </svg>
+              </div>
+              <div class="personal-menu__text">Профиль</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="/" title="Главная"> Главная </a>
+          <span>/</span>
+          <a href="#" title="Каталог оборудования"> Адреса доставок</a>
+          <span>/</span>
+          <a href="#" title="Каталог оборудования"> Платёжные данные</a>
+        </div>
+      </div>
+      <main>
+        <div class="container">
+          <div class="personal-head">
+            <button class="personal-burger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="39"
+                  height="39"
+                  rx="5.5"
+                  stroke="#303239"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M12 14H28V16H12V14ZM12 19H28V21H12V19ZM12 24H28V26H12V24Z"
+                  fill="#303239"
+                />
+              </svg>
+            </button>
+            <h1>Оформление заказа</h1>
+          </div>
+          <div class="delivery-type active" data-order-stage="1">
+            <div class="delivery-type__heading">Способ доставки товара</div>
+            <div class="delivery-type__body">
+              <div class="delivery-type__tabs">
+                <button class="delivery-type__tab" data-delivery="1">
+                  Доставка
+                </button>
+                <button class="delivery-type__tab" data-delivery="2">
+                  Самовывоз
+                </button>
+              </div>
+              <div class="delivery-tabs__content">
+                <div class="delivery-type__content" data-delivery="1">
+                  <div class="delivery-type__title">Способ доставки</div>
+                  <div class="delivery-type__description">
+                    Как вам удобнее забрать заказ
+                  </div>
+                  <div class="delivery-radio">
+                    <div class="delivery-radio__item">
+                      <input
+                        type="radio"
+                        id="home-delivery"
+                        name="delivery"
+                        value="Курьерская доставка до двери"
+                        checked
+                      />
+                      <label for="home-delivery"
+                        ><div class="delivery-radio__check"></div>
+                        Курьерская доставка до двери</label
+                      >
+                    </div>
+
+                    <div class="delivery-radio__item">
+                      <input
+                        type="radio"
+                        id="self-pickup"
+                        name="delivery"
+                        value="Заберу сам в ближайшем пункте
+                        выдачи"
+                      />
+                      <label for="self-pickup"
+                        ><div class="delivery-radio__check"></div>
+                        Заберу сам в ближайшем пункте выдачи</label
+                      >
+                    </div>
+                  </div>
+                  <div class="delivery-type__title">Способ доставки</div>
+                  <div class="delivery-type__description">
+                    Как вам удобнее забрать заказ
+                  </div>
+                  <div class="delivery-company swiper">
+                    <div class="swiper-wrapper">
+                      <div class="delivery-company__item swiper-slide">
+                        <input
+                          type="radio"
+                          id="delivery-company"
+                          name="delivery-company"
+                          value="По городу"
+                          checked
+                        />
+                        <label for="delivery-company">
+                          <div class="delivery-radio__top">
+                            <div class="delivery-radio__check"></div>
+                            <div class="delivery-radio__title">По городу</div>
+                            <div class="delivery-radio__tooltip">
+                              <div class="delivery-radio__tooltip-ico">
+                                <svg
+                                  width="22"
+                                  height="22"
+                                  viewBox="0 0 22 22"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="11"
+                                    cy="11"
+                                    r="11"
+                                    fill="url(#paint0_radial_167_3451)"
+                                  />
+                                  <path
+                                    d="M10.6051 13.1364V13.0767C10.6117 12.4437 10.678 11.9399 10.804 11.5653C10.9299 11.1908 11.1089 10.8875 11.3409 10.6555C11.5729 10.4235 11.8513 10.2098 12.1761 10.0142C12.3717 9.89489 12.5473 9.75402 12.7031 9.59162C12.8589 9.4259 12.9815 9.23532 13.071 9.01989C13.1638 8.80445 13.2102 8.56581 13.2102 8.30398C13.2102 7.97917 13.134 7.69744 12.9815 7.45881C12.8291 7.22017 12.6252 7.03622 12.37 6.90696C12.1148 6.7777 11.8314 6.71307 11.5199 6.71307C11.2481 6.71307 10.9863 6.76941 10.7344 6.8821C10.4825 6.99479 10.272 7.17211 10.103 7.41406C9.93395 7.65601 9.83617 7.97254 9.80966 8.36364H8.55682C8.58333 7.80019 8.72917 7.31794 8.99432 6.9169C9.26278 6.51586 9.61577 6.20928 10.0533 5.99716C10.4941 5.78504 10.983 5.67898 11.5199 5.67898C12.1032 5.67898 12.6103 5.79498 13.0412 6.02699C13.4754 6.259 13.8101 6.57718 14.0455 6.98153C14.2841 7.38589 14.4034 7.84659 14.4034 8.36364C14.4034 8.72822 14.3471 9.058 14.2344 9.35298C14.125 9.64796 13.9659 9.91146 13.7571 10.1435C13.5516 10.3755 13.303 10.581 13.0114 10.7599C12.7197 10.9422 12.486 11.1345 12.3104 11.3366C12.1347 11.5355 12.0071 11.7725 11.9276 12.0476C11.848 12.3227 11.8049 12.6657 11.7983 13.0767V13.1364H10.6051ZM11.2415 16.0795C10.9962 16.0795 10.7857 15.9917 10.6101 15.8161C10.4344 15.6404 10.3466 15.4299 10.3466 15.1847C10.3466 14.9394 10.4344 14.7289 10.6101 14.5533C10.7857 14.3776 10.9962 14.2898 11.2415 14.2898C11.4867 14.2898 11.6972 14.3776 11.8729 14.5533C12.0485 14.7289 12.1364 14.9394 12.1364 15.1847C12.1364 15.3471 12.0949 15.4962 12.0121 15.6321C11.9325 15.768 11.8248 15.8774 11.6889 15.9602C11.5563 16.0398 11.4072 16.0795 11.2415 16.0795Z"
+                                    fill="#8F8B8B"
+                                  />
+                                  <defs>
+                                    <radialGradient
+                                      id="paint0_radial_167_3451"
+                                      cx="0"
+                                      cy="0"
+                                      r="1"
+                                      gradientUnits="userSpaceOnUse"
+                                      gradientTransform="translate(11 11) rotate(90) scale(22)"
+                                    >
+                                      <stop stop-color="#F4F4F4" />
+                                      <stop offset="1" stop-color="#D9D9D9" />
+                                    </radialGradient>
+                                  </defs>
+                                </svg>
+                              </div>
+                              <div class="delivery-radio__tooltip-body">
+                                Тестовая инфа
+                              </div>
+                            </div>
+                          </div>
+                          <div class="delivery-radio__bottom">
+                            Доставка в черте города Новосибирска
+                          </div>
+                        </label>
+                      </div>
+                      <div class="delivery-company__item swiper-slide">
+                        <input
+                          type="radio"
+                          id="delivery-company2"
+                          name="delivery-company"
+                          value="СДЭК"
+                        />
+                        <label for="delivery-company2">
+                          <div class="delivery-radio__top">
+                            <div class="delivery-radio__check"></div>
+                            <div class="delivery-radio__title">СДЭК</div>
+                            <div class="delivery-radio__tooltip">
+                              <div class="delivery-radio__tooltip-ico">
+                                <svg
+                                  width="22"
+                                  height="22"
+                                  viewBox="0 0 22 22"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="11"
+                                    cy="11"
+                                    r="11"
+                                    fill="url(#paint0_radial_167_3451)"
+                                  />
+                                  <path
+                                    d="M10.6051 13.1364V13.0767C10.6117 12.4437 10.678 11.9399 10.804 11.5653C10.9299 11.1908 11.1089 10.8875 11.3409 10.6555C11.5729 10.4235 11.8513 10.2098 12.1761 10.0142C12.3717 9.89489 12.5473 9.75402 12.7031 9.59162C12.8589 9.4259 12.9815 9.23532 13.071 9.01989C13.1638 8.80445 13.2102 8.56581 13.2102 8.30398C13.2102 7.97917 13.134 7.69744 12.9815 7.45881C12.8291 7.22017 12.6252 7.03622 12.37 6.90696C12.1148 6.7777 11.8314 6.71307 11.5199 6.71307C11.2481 6.71307 10.9863 6.76941 10.7344 6.8821C10.4825 6.99479 10.272 7.17211 10.103 7.41406C9.93395 7.65601 9.83617 7.97254 9.80966 8.36364H8.55682C8.58333 7.80019 8.72917 7.31794 8.99432 6.9169C9.26278 6.51586 9.61577 6.20928 10.0533 5.99716C10.4941 5.78504 10.983 5.67898 11.5199 5.67898C12.1032 5.67898 12.6103 5.79498 13.0412 6.02699C13.4754 6.259 13.8101 6.57718 14.0455 6.98153C14.2841 7.38589 14.4034 7.84659 14.4034 8.36364C14.4034 8.72822 14.3471 9.058 14.2344 9.35298C14.125 9.64796 13.9659 9.91146 13.7571 10.1435C13.5516 10.3755 13.303 10.581 13.0114 10.7599C12.7197 10.9422 12.486 11.1345 12.3104 11.3366C12.1347 11.5355 12.0071 11.7725 11.9276 12.0476C11.848 12.3227 11.8049 12.6657 11.7983 13.0767V13.1364H10.6051ZM11.2415 16.0795C10.9962 16.0795 10.7857 15.9917 10.6101 15.8161C10.4344 15.6404 10.3466 15.4299 10.3466 15.1847C10.3466 14.9394 10.4344 14.7289 10.6101 14.5533C10.7857 14.3776 10.9962 14.2898 11.2415 14.2898C11.4867 14.2898 11.6972 14.3776 11.8729 14.5533C12.0485 14.7289 12.1364 14.9394 12.1364 15.1847C12.1364 15.3471 12.0949 15.4962 12.0121 15.6321C11.9325 15.768 11.8248 15.8774 11.6889 15.9602C11.5563 16.0398 11.4072 16.0795 11.2415 16.0795Z"
+                                    fill="#8F8B8B"
+                                  />
+                                  <defs>
+                                    <radialGradient
+                                      id="paint0_radial_167_3451"
+                                      cx="0"
+                                      cy="0"
+                                      r="1"
+                                      gradientUnits="userSpaceOnUse"
+                                      gradientTransform="translate(11 11) rotate(90) scale(22)"
+                                    >
+                                      <stop stop-color="#F4F4F4" />
+                                      <stop offset="1" stop-color="#D9D9D9" />
+                                    </radialGradient>
+                                  </defs>
+                                </svg>
+                              </div>
+                              <div class="delivery-radio__tooltip-body">
+                                Тестовая инфа
+                              </div>
+                            </div>
+                          </div>
+                          <div class="delivery-radio__bottom">
+                            <img src="images/delivery-sdek.png" alt="" />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="delivery-company__item swiper-slide">
+                        <input
+                          type="radio"
+                          id="delivery-company3"
+                          name="delivery-company"
+                          value="Яндекс доставка"
+                        />
+                        <label for="delivery-company3">
+                          <div class="delivery-radio__top">
+                            <div class="delivery-radio__check"></div>
+                            <div class="delivery-radio__title">
+                              Яндекс доставка
+                            </div>
+                            <div class="delivery-radio__tooltip">
+                              <div class="delivery-radio__tooltip-ico">
+                                <svg
+                                  width="22"
+                                  height="22"
+                                  viewBox="0 0 22 22"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="11"
+                                    cy="11"
+                                    r="11"
+                                    fill="url(#paint0_radial_167_3451)"
+                                  />
+                                  <path
+                                    d="M10.6051 13.1364V13.0767C10.6117 12.4437 10.678 11.9399 10.804 11.5653C10.9299 11.1908 11.1089 10.8875 11.3409 10.6555C11.5729 10.4235 11.8513 10.2098 12.1761 10.0142C12.3717 9.89489 12.5473 9.75402 12.7031 9.59162C12.8589 9.4259 12.9815 9.23532 13.071 9.01989C13.1638 8.80445 13.2102 8.56581 13.2102 8.30398C13.2102 7.97917 13.134 7.69744 12.9815 7.45881C12.8291 7.22017 12.6252 7.03622 12.37 6.90696C12.1148 6.7777 11.8314 6.71307 11.5199 6.71307C11.2481 6.71307 10.9863 6.76941 10.7344 6.8821C10.4825 6.99479 10.272 7.17211 10.103 7.41406C9.93395 7.65601 9.83617 7.97254 9.80966 8.36364H8.55682C8.58333 7.80019 8.72917 7.31794 8.99432 6.9169C9.26278 6.51586 9.61577 6.20928 10.0533 5.99716C10.4941 5.78504 10.983 5.67898 11.5199 5.67898C12.1032 5.67898 12.6103 5.79498 13.0412 6.02699C13.4754 6.259 13.8101 6.57718 14.0455 6.98153C14.2841 7.38589 14.4034 7.84659 14.4034 8.36364C14.4034 8.72822 14.3471 9.058 14.2344 9.35298C14.125 9.64796 13.9659 9.91146 13.7571 10.1435C13.5516 10.3755 13.303 10.581 13.0114 10.7599C12.7197 10.9422 12.486 11.1345 12.3104 11.3366C12.1347 11.5355 12.0071 11.7725 11.9276 12.0476C11.848 12.3227 11.8049 12.6657 11.7983 13.0767V13.1364H10.6051ZM11.2415 16.0795C10.9962 16.0795 10.7857 15.9917 10.6101 15.8161C10.4344 15.6404 10.3466 15.4299 10.3466 15.1847C10.3466 14.9394 10.4344 14.7289 10.6101 14.5533C10.7857 14.3776 10.9962 14.2898 11.2415 14.2898C11.4867 14.2898 11.6972 14.3776 11.8729 14.5533C12.0485 14.7289 12.1364 14.9394 12.1364 15.1847C12.1364 15.3471 12.0949 15.4962 12.0121 15.6321C11.9325 15.768 11.8248 15.8774 11.6889 15.9602C11.5563 16.0398 11.4072 16.0795 11.2415 16.0795Z"
+                                    fill="#8F8B8B"
+                                  />
+                                  <defs>
+                                    <radialGradient
+                                      id="paint0_radial_167_3451"
+                                      cx="0"
+                                      cy="0"
+                                      r="1"
+                                      gradientUnits="userSpaceOnUse"
+                                      gradientTransform="translate(11 11) rotate(90) scale(22)"
+                                    >
+                                      <stop stop-color="#F4F4F4" />
+                                      <stop offset="1" stop-color="#D9D9D9" />
+                                    </radialGradient>
+                                  </defs>
+                                </svg>
+                              </div>
+                              <div class="delivery-radio__tooltip-body">
+                                Тестовая инфа
+                              </div>
+                            </div>
+                          </div>
+                          <div class="delivery-radio__bottom">
+                            Доставка в черте города Новосибирска
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="delivery-free">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="31"
+                      height="20"
+                      viewBox="0 0 31 20"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.58621 0C5.03393 0 4.58621 0.447715 4.58621 1C4.58621 1.55228 5.03393 2 5.58621 2H20.3833V4.04077C20.3831 4.05105 20.3831 4.06137 20.3833 4.0717V4.91768C20.3833 8.23139 23.0695 10.9177 26.3833 10.9177H28.027V15.5423H25.3064C24.8825 14.2016 23.6286 13.2297 22.1477 13.2297C20.5745 13.2297 19.2574 14.3265 18.9195 15.7971H11.6171C11.2792 14.3265 9.96214 13.2297 8.38894 13.2297C6.81575 13.2297 5.49872 14.3265 5.16076 15.7971H1C0.447715 15.7971 0 16.2448 0 16.7971C0 17.3494 0.447715 17.7971 1 17.7971H5.32272C5.8173 19.0041 7.00384 19.8543 8.38894 19.8543C9.77405 19.8543 10.9606 19.0041 11.4552 17.7971H19.0814C19.576 19.0041 20.7626 19.8543 22.1477 19.8543C23.6284 19.8543 24.8822 18.8827 25.3063 17.5422H30.027V9.91768C30.027 8.52783 29.4277 6.62134 28.0321 5.15228C26.7733 3.82719 24.9078 2.90175 22.3833 2.9721V0H5.58621ZM26.3833 8.91768C24.1925 8.91768 22.4132 7.15657 22.3836 4.97288C24.3898 4.90222 25.7206 5.62286 26.5821 6.52978C27.2774 7.26161 27.6942 8.14388 27.8905 8.91768H26.3833ZM8.38894 17.8543C9.1137 17.8543 9.70123 17.2668 9.70123 16.542C9.70123 15.8173 9.1137 15.2297 8.38894 15.2297C7.66419 15.2297 7.07666 15.8173 7.07666 16.542C7.07666 17.2668 7.66419 17.8543 8.38894 17.8543ZM22.1477 17.8543C22.8724 17.8543 23.46 17.2668 23.46 16.542C23.46 15.8173 22.8724 15.2297 22.1477 15.2297C21.4229 15.2297 20.8354 15.8173 20.8354 16.542C20.8354 17.2668 21.4229 17.8543 22.1477 17.8543ZM0 9.91797C0 9.36568 0.447715 8.91797 1 8.91797H15.0135C15.5658 8.91797 16.0135 9.36568 16.0135 9.91797C16.0135 10.4703 15.5658 10.918 15.0135 10.918H1C0.447715 10.918 0 10.4703 0 9.91797ZM3.54791 4.58643C2.99563 4.58643 2.54791 5.03414 2.54791 5.58643C2.54791 6.13871 2.99563 6.58643 3.54791 6.58643H15.0135C15.5658 6.58643 16.0135 6.13871 16.0135 5.58643C16.0135 5.03414 15.5658 4.58643 15.0135 4.58643H3.54791Z"
+                        fill="url(#paint0_linear_167_3462)"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_167_3462"
+                          x1="5.5"
+                          y1="-0.499999"
+                          x2="23.5"
+                          y2="20"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#4DADFF" />
+                          <stop offset="1" stop-color="#297BFA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <span
+                      >Бесплатная доствка заказа (заказ свыше 50 000 ₽)</span
+                    >
+                  </div>
+                  <div class="delivery-type__title">Мой адрес</div>
+                  <div class="delivery-type__description">
+                    По какому адресу приедет курьер
+                  </div>
+                  <ul class="payment-details__list">
+                    <li class="payment-details__item">
+                      <div class="payment-company">
+                        <div class="payment-company__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.2373 5.56896C13.2373 7.64045 11.5617 9.31973 9.49478 9.31973C7.42784 9.31973 5.75225 7.64045 5.75225 5.56896C5.75225 3.49746 7.42784 1.81818 9.49478 1.81818C11.5617 1.81818 13.2373 3.49746 13.2373 5.56896ZM15.0515 5.56896C15.0515 8.6446 12.5637 11.1379 9.49478 11.1379C6.42589 11.1379 3.93807 8.6446 3.93807 5.56896C3.93807 2.49331 6.42589 0 9.49478 0C12.5637 0 15.0515 2.49331 15.0515 5.56896ZM1.66337 18.7275C3.5398 15.8892 6.58679 14.0718 10 14.0718C13.4132 14.0718 16.4602 15.8892 18.3366 18.7275C18.6133 19.1461 19.1762 19.2606 19.5938 18.9833C20.0114 18.706 20.1257 18.1419 19.849 17.7233C17.6729 14.4317 14.0847 12.2536 10 12.2536C5.91534 12.2536 2.32711 14.4317 0.151012 17.7233C-0.125688 18.1419 -0.0114433 18.706 0.406183 18.9833C0.82381 19.2606 1.38667 19.1461 1.66337 18.7275Z"
+                              fill="#50575B"
+                            />
+                          </svg>
+                        </div>
+                        <div class="payment-company__content">
+                          <div class="payment-company__name">
+                            Анастасия Василисовна
+                          </div>
+                          <a href="#" class="payment-company__phone"
+                            >+7 (923) 100-01-05</a
+                          >
+                          <div class="payment-company__info">
+                            ООО «Мясоперерабатывающая компания»
+                          </div>
+                        </div>
+                      </div>
+                      <div class="paymnet-address">
+                        <div class="paymnet-address__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="15"
+                            height="16"
+                            viewBox="0 0 15 16"
+                            fill="none"
+                          >
+                            <path
+                              d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                              fill="#50575B"
+                            />
+                          </svg>
+                        </div>
+                        <div class="paymnet-address__text">
+                          ул. Ленина, дом 18, кв. 20 Прокопьевск, Кемеровская
+                          область – Кузбасс, 630123
+                        </div>
+                      </div>
+                      <div class="payment-main">
+                        <div class="payment-main__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="11"
+                            viewBox="0 0 22 11"
+                            fill="none"
+                          >
+                            <path
+                              d="M1.5 5.5L5.5 9.5L13.5 1.5"
+                              stroke="#50575B"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.5 8L13 9.5L21 1.5"
+                              stroke="#50575B"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div class="payment-main__text">Мой основной адрес</div>
+                      </div>
+                      <div class="payment-details__btns">
+                        <a
+                          href="#"
+                          data-fancybox
+                          data-src="#change-address"
+                          class="payment-details__submit"
+                          >Сменить адрес</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="delivery-type__title">Состав заказа</div>
+                  <div class="delivery-type__description">
+                    Проверьте состав вашего заказа
+                  </div>
+                  <div class="order-list">
+                    <div class="active-orders__item">
+                      <div class="order-available">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="20"
+                          viewBox="0 0 19 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M9.25 8.5L1.75 5.125M9.25 8.5L16.75 5.125M9.25 8.5V18.25M8.00859 18.4357L2.17239 15.7829C1.45841 15.4584 1 14.7465 1 13.9622V6.03783C1 5.25354 1.45841 4.54163 2.17239 4.21709L8.42239 1.37618C8.94824 1.13716 9.55176 1.13716 10.0776 1.37618L16.3276 4.21709C17.0416 4.54163 17.5 5.25354 17.5 6.03783V13.9622C17.5 14.7465 17.0416 15.4584 16.3276 15.7829L10.4914 18.4357C9.70263 18.7943 8.79737 18.7943 8.00859 18.4357Z"
+                            stroke="#246EDC"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                        <span>Все товары в наличии</span>
+                      </div>
+                      <div class="active-orders__additional">
+                        <div class="active-orders__info"></div>
+                        <div class="active-orders__list-items">
+                          <div class="active-orders__list-title">
+                            Список товаров
+                          </div>
+                          <div class="active-orders__list-content">
+                            <div class="active-orders__list-item">
+                              <div class="active-orders__list-item_top">
+                                <div class="active-orders__list-item__image">
+                                  <img src="images/goods-list.png" alt="" />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="active-orders__list-item__title"
+                                >
+                                  Автоматическая тестораскаточная машина YP-520
+                                </a>
+                                <a href="#" class="order-delete">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="35"
+                                    height="35"
+                                    viewBox="0 0 35 35"
+                                    fill="none"
+                                  >
+                                    <circle
+                                      cx="17.5"
+                                      cy="17.5"
+                                      r="16.5"
+                                      stroke="#F7F8FA"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M20 8H15C13.897 8 13 8.897 13 10V12H9V14H11V25C11 26.103 11.897 27 13 27H22C23.103 27 24 26.103 24 25V14H26V12H22V10C22 8.897 21.103 8 20 8ZM15 10H20V12H15V10ZM22 25H13V14H22V25Z"
+                                      fill="#3C4449"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                              <div class="active-orders__list-item_bottom">
+                                <div class="active-orders__list-item__count">
+                                  <div
+                                    class="active-orders__list-item__count-title"
+                                  >
+                                    Кол-во
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__count-value"
+                                  >
+                                    3
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__stock">
+                                  <div
+                                    class="active-orders__list-item__stock-title"
+                                  >
+                                    Склад отгрузки
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-city"
+                                  >
+                                    Новосибирск
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-value"
+                                  >
+                                    В наличии
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__price">
+                                  <div
+                                    class="active-orders__list-item__price-title"
+                                  >
+                                    Цена / шт
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__price-value"
+                                  >
+                                    12 253 437 ₽
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="active-orders__list-item">
+                              <div class="active-orders__list-item_top">
+                                <div class="active-orders__list-item__image">
+                                  <img src="images/goods-list.png" alt="" />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="active-orders__list-item__title"
+                                >
+                                  Автоматическая тестораскаточная машина YP-520
+                                </a>
+                                <a href="#" class="order-delete">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="35"
+                                    height="35"
+                                    viewBox="0 0 35 35"
+                                    fill="none"
+                                  >
+                                    <circle
+                                      cx="17.5"
+                                      cy="17.5"
+                                      r="16.5"
+                                      stroke="#F7F8FA"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M20 8H15C13.897 8 13 8.897 13 10V12H9V14H11V25C11 26.103 11.897 27 13 27H22C23.103 27 24 26.103 24 25V14H26V12H22V10C22 8.897 21.103 8 20 8ZM15 10H20V12H15V10ZM22 25H13V14H22V25Z"
+                                      fill="#3C4449"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                              <div class="active-orders__list-item_bottom">
+                                <div class="active-orders__list-item__count">
+                                  <div
+                                    class="active-orders__list-item__count-title"
+                                  >
+                                    Кол-во
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__count-value"
+                                  >
+                                    3
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__stock">
+                                  <div
+                                    class="active-orders__list-item__stock-title"
+                                  >
+                                    Склад отгрузки
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-city"
+                                  >
+                                    Новосибирск
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-value"
+                                  >
+                                    В наличии
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__price">
+                                  <div
+                                    class="active-orders__list-item__price-title"
+                                  >
+                                    Цена / шт
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__price-value"
+                                  >
+                                    12 253 437 ₽
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="active-orders__delivery-item">
+                              <div class="active-orders__delivery-ico">
+                                <img src="images/sdek.png" alt="" />
+                              </div>
+                              <div class="active-orders__delivery-name">
+                                Курьерская доставка до двери ТК «СДЕК»
+                              </div>
+                              <div class="active-orders__delivery-price">
+                                <div
+                                  class="active-orders__delivery-price__title"
+                                >
+                                  Стоимость
+                                </div>
+                                <div
+                                  class="active-orders__delivery-price__value"
+                                >
+                                  Бесплатно
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="active-orders__total">
+                    <div class="active-orders__total-title">Итого в заказе</div>
+                    <div class="active-orders__total-count">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="19"
+                        height="20"
+                        viewBox="0 0 19 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.25 8.5L1.75 5.125M9.25 8.5L16.75 5.125M9.25 8.5V18.25M8.00859 18.4357L2.17239 15.7829C1.45841 15.4584 1 14.7465 1 13.9622V6.03783C1 5.25354 1.45841 4.54163 2.17239 4.21709L8.42239 1.37618C8.94824 1.13716 9.55176 1.13716 10.0776 1.37618L16.3276 4.21709C17.0416 4.54163 17.5 5.25354 17.5 6.03783V13.9622C17.5 14.7465 17.0416 15.4584 16.3276 15.7829L10.4914 18.4357C9.70263 18.7943 8.79737 18.7943 8.00859 18.4357Z"
+                          stroke="#303239"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span>107</span>
+                    </div>
+                    <div class="active-orders__total-price">12 420 600 ₽</div>
+                  </div>
+                  <button class="order-next">Продолжить</button>
+                </div>
+                <div class="delivery-type__content" data-delivery="2">
+                  <div class="delivery-type__title">Пункты самовывоза</div>
+                  <div class="delivery-type__description">
+                    Выберите пункт самовывоза, в котором есть наличие товара
+                  </div>
+                  <div class="select pick-up__select">
+                    <input type="text" />
+                    <div class="select__head">Новосибирск</div>
+                    <ul class="select__list">
+                      <li class="select__item" data-point="1">
+                        <span>Новосибирск</span>
+                      </li>
+                      <li class="select__item" data-point="2">
+                        <span>Москва</span>
+                      </li>
+                      <li class="select__item" data-point="3">
+                        <span>Питер</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pick-up__container">
+                    <div class="pick-up__item" data-point="1">
+                      <div class="pick-up__content">
+                        <div class="pick-up__point">
+                          <div class="pick-up__point__top">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="22"
+                              height="23"
+                              viewBox="0 0 22 23"
+                              fill="none"
+                            >
+                              <path
+                                d="M18 21.4545H4C2.34315 21.4545 1 20.1114 1 18.4545V8.05035C1 7.34304 1.3736 6.68833 1.98254 6.3285L9.47381 1.90184C10.4152 1.34554 11.5848 1.34554 12.5262 1.90184L20.0175 6.3285C20.6264 6.68833 21 7.34304 21 8.05035V18.4545C21 20.1114 19.6569 21.4545 18 21.4545Z"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <path
+                                d="M15 17.8184H7"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                            <span>Пункт самовывоза HM – Новосибирск</span>
+                          </div>
+                          <div class="pick-up__point__bottom">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="15"
+                              height="16"
+                              viewBox="0 0 15 16"
+                              fill="none"
+                            >
+                              <path
+                                d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                                fill="#50575B"
+                              />
+                            </svg>
+                            <span
+                              >улица Писарева, дом 40, 6 этаж Новосибирск,
+                              Новосибирская область, 653039</span
+                            >
+                          </div>
+                        </div>
+                        <div id="map-point" class="map-point"></div>
+                      </div>
+                    </div>
+                    <div class="pick-up__item" data-point="2">
+                      <div class="pick-up__content">
+                        <div class="pick-up__point">
+                          <div class="pick-up__point__top">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="22"
+                              height="23"
+                              viewBox="0 0 22 23"
+                              fill="none"
+                            >
+                              <path
+                                d="M18 21.4545H4C2.34315 21.4545 1 20.1114 1 18.4545V8.05035C1 7.34304 1.3736 6.68833 1.98254 6.3285L9.47381 1.90184C10.4152 1.34554 11.5848 1.34554 12.5262 1.90184L20.0175 6.3285C20.6264 6.68833 21 7.34304 21 8.05035V18.4545C21 20.1114 19.6569 21.4545 18 21.4545Z"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <path
+                                d="M15 17.8184H7"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                            <span>Пункт самовывоза HM – Новосибирск</span>
+                          </div>
+                          <div class="pick-up__point__bottom">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="15"
+                              height="16"
+                              viewBox="0 0 15 16"
+                              fill="none"
+                            >
+                              <path
+                                d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                                fill="#50575B"
+                              />
+                            </svg>
+                            <span
+                              >улица Писарева, дом 40, 6 этаж Новосибирск,
+                              Новосибирская область, 653039</span
+                            >
+                          </div>
+                        </div>
+                        <div id="map-point2" class="map-point"></div>
+                      </div>
+                    </div>
+                    <div class="pick-up__item" data-point="3">
+                      <div class="pick-up__content">
+                        <div class="pick-up__point">
+                          <div class="pick-up__point__top">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="22"
+                              height="23"
+                              viewBox="0 0 22 23"
+                              fill="none"
+                            >
+                              <path
+                                d="M18 21.4545H4C2.34315 21.4545 1 20.1114 1 18.4545V8.05035C1 7.34304 1.3736 6.68833 1.98254 6.3285L9.47381 1.90184C10.4152 1.34554 11.5848 1.34554 12.5262 1.90184L20.0175 6.3285C20.6264 6.68833 21 7.34304 21 8.05035V18.4545C21 20.1114 19.6569 21.4545 18 21.4545Z"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <path
+                                d="M15 17.8184H7"
+                                stroke="#50575B"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                            <span>Пункт самовывоза HM – Новосибирск</span>
+                          </div>
+                          <div class="pick-up__point__bottom">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="15"
+                              height="16"
+                              viewBox="0 0 15 16"
+                              fill="none"
+                            >
+                              <path
+                                d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                                fill="#50575B"
+                              />
+                            </svg>
+                            <span
+                              >улица Писарева, дом 40, 6 этаж Новосибирск,
+                              Новосибирская область, 653039</span
+                            >
+                          </div>
+                        </div>
+                        <div id="map-point3" class="map-point"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="delivery-type__title">Состав заказа</div>
+                  <div class="delivery-type__description">
+                    Проверьте состав вашего заказа
+                  </div>
+                  <div class="order-list">
+                    <div class="active-orders__item">
+                      <div class="order-available">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="20"
+                          viewBox="0 0 19 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M9.25 8.5L1.75 5.125M9.25 8.5L16.75 5.125M9.25 8.5V18.25M8.00859 18.4357L2.17239 15.7829C1.45841 15.4584 1 14.7465 1 13.9622V6.03783C1 5.25354 1.45841 4.54163 2.17239 4.21709L8.42239 1.37618C8.94824 1.13716 9.55176 1.13716 10.0776 1.37618L16.3276 4.21709C17.0416 4.54163 17.5 5.25354 17.5 6.03783V13.9622C17.5 14.7465 17.0416 15.4584 16.3276 15.7829L10.4914 18.4357C9.70263 18.7943 8.79737 18.7943 8.00859 18.4357Z"
+                            stroke="#246EDC"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                        <span>Все товары в наличии</span>
+                      </div>
+                      <div class="active-orders__additional">
+                        <div class="active-orders__info"></div>
+                        <div class="active-orders__list-items">
+                          <div class="active-orders__list-title">
+                            Список товаров
+                          </div>
+                          <div class="active-orders__list-content">
+                            <div class="active-orders__list-item">
+                              <div class="active-orders__list-item_top">
+                                <div class="active-orders__list-item__image">
+                                  <img src="images/goods-list.png" alt="" />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="active-orders__list-item__title"
+                                >
+                                  Автоматическая тестораскаточная машина YP-520
+                                </a>
+                                <a href="#" class="order-delete">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="35"
+                                    height="35"
+                                    viewBox="0 0 35 35"
+                                    fill="none"
+                                  >
+                                    <circle
+                                      cx="17.5"
+                                      cy="17.5"
+                                      r="16.5"
+                                      stroke="#F7F8FA"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M20 8H15C13.897 8 13 8.897 13 10V12H9V14H11V25C11 26.103 11.897 27 13 27H22C23.103 27 24 26.103 24 25V14H26V12H22V10C22 8.897 21.103 8 20 8ZM15 10H20V12H15V10ZM22 25H13V14H22V25Z"
+                                      fill="#3C4449"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                              <div class="active-orders__list-item_bottom">
+                                <div class="active-orders__list-item__count">
+                                  <div
+                                    class="active-orders__list-item__count-title"
+                                  >
+                                    Кол-во
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__count-value"
+                                  >
+                                    3
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__stock">
+                                  <div
+                                    class="active-orders__list-item__stock-title"
+                                  >
+                                    Склад отгрузки
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-city"
+                                  >
+                                    Новосибирск
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-value"
+                                  >
+                                    В наличии
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__price">
+                                  <div
+                                    class="active-orders__list-item__price-title"
+                                  >
+                                    Цена / шт
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__price-value"
+                                  >
+                                    12 253 437 ₽
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="active-orders__list-item">
+                              <div class="active-orders__list-item_top">
+                                <div class="active-orders__list-item__image">
+                                  <img src="images/goods-list.png" alt="" />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="active-orders__list-item__title"
+                                >
+                                  Автоматическая тестораскаточная машина YP-520
+                                </a>
+                                <a href="#" class="order-delete">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="35"
+                                    height="35"
+                                    viewBox="0 0 35 35"
+                                    fill="none"
+                                  >
+                                    <circle
+                                      cx="17.5"
+                                      cy="17.5"
+                                      r="16.5"
+                                      stroke="#F7F8FA"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M20 8H15C13.897 8 13 8.897 13 10V12H9V14H11V25C11 26.103 11.897 27 13 27H22C23.103 27 24 26.103 24 25V14H26V12H22V10C22 8.897 21.103 8 20 8ZM15 10H20V12H15V10ZM22 25H13V14H22V25Z"
+                                      fill="#3C4449"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                              <div class="active-orders__list-item_bottom">
+                                <div class="active-orders__list-item__count">
+                                  <div
+                                    class="active-orders__list-item__count-title"
+                                  >
+                                    Кол-во
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__count-value"
+                                  >
+                                    3
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__stock">
+                                  <div
+                                    class="active-orders__list-item__stock-title"
+                                  >
+                                    Склад отгрузки
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-city"
+                                  >
+                                    Новосибирск
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__stock-value"
+                                  >
+                                    В наличии
+                                  </div>
+                                </div>
+                                <div class="active-orders__list-item__price">
+                                  <div
+                                    class="active-orders__list-item__price-title"
+                                  >
+                                    Цена / шт
+                                  </div>
+                                  <div
+                                    class="active-orders__list-item__price-value"
+                                  >
+                                    12 253 437 ₽
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="active-orders__delivery-item">
+                              <div class="active-orders__delivery-ico">
+                                <img src="images/sdek.png" alt="" />
+                              </div>
+                              <div class="active-orders__delivery-name">
+                                Курьерская доставка до двери ТК «СДЕК»
+                              </div>
+                              <div class="active-orders__delivery-price">
+                                <div
+                                  class="active-orders__delivery-price__title"
+                                >
+                                  Стоимость
+                                </div>
+                                <div
+                                  class="active-orders__delivery-price__value"
+                                >
+                                  Бесплатно
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="active-orders__total">
+                    <div class="active-orders__total-title">Итого в заказе</div>
+                    <div class="active-orders__total-count">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="19"
+                        height="20"
+                        viewBox="0 0 19 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.25 8.5L1.75 5.125M9.25 8.5L16.75 5.125M9.25 8.5V18.25M8.00859 18.4357L2.17239 15.7829C1.45841 15.4584 1 14.7465 1 13.9622V6.03783C1 5.25354 1.45841 4.54163 2.17239 4.21709L8.42239 1.37618C8.94824 1.13716 9.55176 1.13716 10.0776 1.37618L16.3276 4.21709C17.0416 4.54163 17.5 5.25354 17.5 6.03783V13.9622C17.5 14.7465 17.0416 15.4584 16.3276 15.7829L10.4914 18.4357C9.70263 18.7943 8.79737 18.7943 8.00859 18.4357Z"
+                          stroke="#303239"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span>107</span>
+                    </div>
+                    <div class="active-orders__total-price">12 420 600 ₽</div>
+                  </div>
+                  <button class="order-next">Продолжить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="delivery-type" data-order-stage="2">
+            <div class="delivery-type__title">Способ оплаты</div>
+            <div class="delivery-type__description">
+              Выберите удобный способ оплаты заказа
+            </div>
+            <div class="payment-radio">
+              <div class="payment-radio__item">
+                <input
+                  type="radio"
+                  id="payment-type1"
+                  name="payment-type"
+                  value="Курьерская доставка до двери"
+                  checked
+                />
+                <label for="payment-type1">
+                  <div class="payment-radio__top">
+                    <div class="payment-radio__check"></div>
+                    <div class="payment-radio__title">
+                      Выставить счет по безналичному расчету
+                    </div>
+                  </div>
+                  <div class="payment-radio__middle">
+                    <div class="payment-radio__ico">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="22"
+                        viewBox="0 0 20 22"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.25532 4.38991C4.1383 4.38991 4.04255 4.48073 4.04255 4.59174V5.80275C4.04255 5.91376 4.1383 6.00459 4.25532 6.00459H14.4681C14.5851 6.00459 14.6809 5.91376 14.6809 5.80275V4.59174C14.6809 4.48073 14.5851 4.38991 14.4681 4.38991H4.25532ZM9.14894 8.02294H4.25532C4.1383 8.02294 4.04255 8.11376 4.04255 8.22477V9.43578C4.04255 9.54679 4.1383 9.63761 4.25532 9.63761H9.14894C9.26596 9.63761 9.3617 9.54679 9.3617 9.43578V8.22477C9.3617 8.11376 9.26596 8.02294 9.14894 8.02294ZM7.87234 19.1835H1.91489V1.81651H17.1809V9.88991C17.1809 10.0009 17.2766 10.0917 17.3936 10.0917H18.883C19 10.0917 19.0957 10.0009 19.0957 9.88991V0.807339C19.0957 0.36078 18.7154 0 18.2447 0H0.851064C0.380319 0 0 0.36078 0 0.807339V20.1927C0 20.6392 0.380319 21 0.851064 21H7.87234C7.98936 21 8.08511 20.9092 8.08511 20.7982V19.3853C8.08511 19.2743 7.98936 19.1835 7.87234 19.1835ZM19.5745 17.3578H15.7447V16.4344C16.9761 16.0862 17.8723 15.0064 17.8723 13.7248C17.8723 12.1631 16.5399 10.8991 14.8936 10.8991C13.2473 10.8991 11.9149 12.1631 11.9149 13.7248C11.9149 15.0039 12.8112 16.0862 14.0426 16.4344V17.3578H10.2128C9.97872 17.3578 9.78723 17.5394 9.78723 17.7615V21.5963C9.78723 21.8183 9.97872 22 10.2128 22H19.5745C19.8085 22 20 21.8183 20 21.5963V17.7615C20 17.5394 19.8085 17.3578 19.5745 17.3578ZM13.5638 13.7248C13.5638 13.0284 14.1596 12.4633 14.8936 12.4633C15.6277 12.4633 16.2234 13.0284 16.2234 13.7248C16.2234 14.4211 15.6277 14.9862 14.8936 14.9862C14.1596 14.9862 13.5638 14.4211 13.5638 13.7248ZM18.3511 20.4358H11.4362V18.922H18.3511V20.4358Z"
+                          fill="#8A9AA3"
+                        />
+                      </svg>
+                    </div>
+                    <div class="payment-radio__value">
+                      Нет созданных платежных данных
+                    </div>
+                    <button
+                      class="payment-radio__btn"
+                      data-fancybox
+                      data-src="#change-payer"
+                    >
+                      Выбрать плательщика
+                    </button>
+                  </div>
+                  <div class="payment-radio__bottom">
+                    Вышлем счет на оплату на почту
+                    <a href="mailto:company@yandex.ru">company@yandex.ru</a>
+                    <div class="payment-radio__banks">
+                      <div class="payment-radio__bank">
+                        <img src="images/bank1.png" alt="" />
+                      </div>
+                      <div class="payment-radio__bank">
+                        <img src="images/bank2.png" alt="" />
+                      </div>
+                      <div class="payment-radio__bank">
+                        <img src="images/bank3.png" alt="" />
+                      </div>
+                      <div class="payment-radio__bank">
+                        <img src="images/bank4.png" alt="" />
+                      </div>
+                      <div class="payment-radio__bank">
+                        <img src="images/bank5.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="payment-radio__about">
+                      Больше 100 банков по всей России
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="order-details">
+              <div class="order-details__count">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="24"
+                  viewBox="0 0 23 24"
+                  fill="none"
+                >
+                  <path
+                    d="M11.0833 10.1667L1.91667 6.04167M11.0833 10.1667L20.25 6.04167M11.0833 10.1667V22.0833M9.84192 22.4357L2.17239 18.9496C1.45841 18.625 1 17.9131 1 17.1288V6.87116C1 6.08687 1.45841 5.37497 2.1724 5.05043L10.2557 1.37618C10.7816 1.13716 11.3851 1.13716 11.9109 1.37619L19.9943 5.05043C20.7083 5.37497 21.1667 6.08687 21.1667 6.87116V17.1288C21.1667 17.9131 20.7083 18.625 19.9943 18.9496L12.3247 22.4357C11.536 22.7943 10.6307 22.7943 9.84192 22.4357Z"
+                    stroke="#2483DC"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>30 позиций</span>
+              </div>
+              <span class="order-details__dash">–</span>
+              <div class="order-details__value">12 420 600 ₽</div>
+            </div>
+            <div class="picked-address">
+              <div class="picked-address__title">
+                СДЕК – Курьерская доставка до двери
+              </div>
+              <div class="picked-address__value">
+                ул. Ленина, дом 18, кв. 20 Прокопьевск, Кемеровская область –
+                Кузбасс 630123
+              </div>
+            </div>
+            <div class="picked-person">
+              <div class="picked-person__title">
+                ООО «Мясоперерабатывающая компания»
+              </div>
+              <div class="picked-person__name">Анастасия Василисовна</div>
+              <a href="tel:+79231000105" class="picked-person__phone"
+                >+7 (923) 100-01-05</a
+              >
+            </div>
+            <div class="picked-payment">
+              <div class="picked-payment__title">Способ оплаты</div>
+              <div class="picked-payment__value">Оплата банковской картой</div>
+            </div>
+            <div class="picked-btns">
+              <a href="#" class="picked-order disabled">Оформить заказ</a>
+              <button class="order-back">Вернуться назад</button>
+            </div>
+          </div>
+          <div class="agent">
+            <div class="agent-head">
+              <div class="agent-logo">
+                <img src="images/agent-img.png" alt="" />
+              </div>
+              <div class="agent-text">
+                <div class="agent-text__name">Анастасия Игоревна</div>
+                <div class="agent-text__post">Представитель HMRU</div>
+              </div>
+            </div>
+            <div class="agent-body">
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M18 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0ZM18 4.7L10 10.034L2 4.7V2.297L10 7.63L18 2.297V4.7Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">anastasia@hmru.ru</div>
+              </a>
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22ZM7.22789 5.04397C7.55102 5.05703 7.71275 5.07645 7.92605 5.58727C7.99625 5.7567 8.09316 5.99185 8.19917 6.24907C8.49363 6.96354 8.85824 7.84822 8.91536 7.96739C8.99288 8.12912 9.07056 8.34912 8.96056 8.56242C8.86434 8.76701 8.77942 8.86518 8.63792 9.02873C8.62726 9.04105 8.61628 9.05374 8.60495 9.06688C8.53558 9.14746 8.46742 9.21965 8.39941 9.29168C8.30902 9.3874 8.21892 9.48282 8.12663 9.59728L8.11904 9.60617C7.97235 9.77814 7.81304 9.96491 7.99738 10.2827C8.18472 10.5997 8.83114 11.6536 9.78161 12.5006C10.9098 13.5042 11.8415 13.881 12.2615 14.0508C12.2988 14.0659 12.3321 14.0794 12.3611 14.0915C12.6261 14.2015 12.9431 14.1755 13.137 13.9686C13.3469 13.7421 13.5992 13.3881 13.8618 13.0196C13.9066 12.9568 13.9516 12.8935 13.9968 12.8304C14.2165 12.52 14.4944 12.4812 14.7854 12.591C15.0828 12.6945 16.6539 13.4705 16.977 13.6322C17.0431 13.6653 17.1045 13.6949 17.1612 13.7222C17.3817 13.8282 17.5294 13.8992 17.5911 14.0072C17.6688 14.143 17.6688 14.7833 17.4038 15.5335C17.1385 16.2834 16.0848 16.9045 15.2443 17.0855C14.669 17.2082 13.919 17.3054 11.3912 16.2578C8.3978 15.0179 6.39119 12.1089 5.98235 11.5162C5.9497 11.4689 5.92724 11.4363 5.91528 11.4205C5.91076 11.4143 5.90539 11.407 5.89924 11.3985C5.69401 11.1179 4.60938 9.63484 4.60938 8.10283C4.60938 6.5694 5.3667 5.79946 5.70592 5.45459C5.71574 5.44461 5.72521 5.43498 5.7343 5.4257C5.9995 5.15414 6.43898 5.03125 6.85939 5.03125C6.99534 5.03125 7.11789 5.03761 7.22789 5.04397Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">8 (800) 500-1-495</div>
+              </a>
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="19"
+                    viewBox="0 0 22 19"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.214 0.215944L0.723048 7.96788C-0.0612952 8.32885 -0.326588 9.05182 0.533438 9.44415L5.53376 11.083L17.6238 3.37682C18.2839 2.89302 18.9597 3.02203 18.3782 3.55421L7.99447 13.2508L7.66828 17.3544C7.97041 17.988 8.5236 17.991 8.87644 17.6761L11.7493 14.8725L16.6694 18.6723C17.8121 19.3701 18.4339 18.9198 18.6798 17.641L21.907 1.88064C22.242 0.306414 21.6706 -0.387185 20.214 0.215944Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">anastasia@hmru.ru</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="change-address" style="display: none">
+        <div class="change-address__title">Сменить адрес доставки</div>
+        <ul class="payment-details__list">
+          <li class="payment-details__item selected">
+            <div class="payment-company">
+              <div class="payment-company__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.2373 5.56896C13.2373 7.64045 11.5617 9.31973 9.49478 9.31973C7.42784 9.31973 5.75225 7.64045 5.75225 5.56896C5.75225 3.49746 7.42784 1.81818 9.49478 1.81818C11.5617 1.81818 13.2373 3.49746 13.2373 5.56896ZM15.0515 5.56896C15.0515 8.6446 12.5637 11.1379 9.49478 11.1379C6.42589 11.1379 3.93807 8.6446 3.93807 5.56896C3.93807 2.49331 6.42589 0 9.49478 0C12.5637 0 15.0515 2.49331 15.0515 5.56896ZM1.66337 18.7275C3.5398 15.8892 6.58679 14.0718 10 14.0718C13.4132 14.0718 16.4602 15.8892 18.3366 18.7275C18.6133 19.1461 19.1762 19.2606 19.5938 18.9833C20.0114 18.706 20.1257 18.1419 19.849 17.7233C17.6729 14.4317 14.0847 12.2536 10 12.2536C5.91534 12.2536 2.32711 14.4317 0.151012 17.7233C-0.125688 18.1419 -0.0114433 18.706 0.406183 18.9833C0.82381 19.2606 1.38667 19.1461 1.66337 18.7275Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="payment-company__content">
+                <div class="payment-company__name">Анастасия Василисовна</div>
+                <a href="#" class="payment-company__phone"
+                  >+7 (923) 100-01-05</a
+                >
+                <div class="payment-company__info">
+                  ООО «Мясоперерабатывающая компания»
+                </div>
+              </div>
+            </div>
+            <div class="paymnet-address">
+              <div class="paymnet-address__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="none"
+                >
+                  <path
+                    d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="paymnet-address__text">
+                ул. Ленина, дом 18, кв. 20 Прокопьевск, Кемеровская область –
+                Кузбасс, 630123
+              </div>
+            </div>
+            <div class="payment-main">
+              <div class="payment-main__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="11"
+                  viewBox="0 0 22 11"
+                  fill="none"
+                >
+                  <path
+                    d="M1.5 5.5L5.5 9.5L13.5 1.5"
+                    stroke="#50575B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.5 8L13 9.5L21 1.5"
+                    stroke="#50575B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="payment-main__text">Основной</div>
+            </div>
+            <div class="payment-details__btns">
+              <a href="#" class="payment-details__delete">Выбранные</a>
+            </div>
+          </li>
+          <li class="payment-details__item">
+            <div class="payment-company">
+              <div class="payment-company__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.2373 5.56896C13.2373 7.64045 11.5617 9.31973 9.49478 9.31973C7.42784 9.31973 5.75225 7.64045 5.75225 5.56896C5.75225 3.49746 7.42784 1.81818 9.49478 1.81818C11.5617 1.81818 13.2373 3.49746 13.2373 5.56896ZM15.0515 5.56896C15.0515 8.6446 12.5637 11.1379 9.49478 11.1379C6.42589 11.1379 3.93807 8.6446 3.93807 5.56896C3.93807 2.49331 6.42589 0 9.49478 0C12.5637 0 15.0515 2.49331 15.0515 5.56896ZM1.66337 18.7275C3.5398 15.8892 6.58679 14.0718 10 14.0718C13.4132 14.0718 16.4602 15.8892 18.3366 18.7275C18.6133 19.1461 19.1762 19.2606 19.5938 18.9833C20.0114 18.706 20.1257 18.1419 19.849 17.7233C17.6729 14.4317 14.0847 12.2536 10 12.2536C5.91534 12.2536 2.32711 14.4317 0.151012 17.7233C-0.125688 18.1419 -0.0114433 18.706 0.406183 18.9833C0.82381 19.2606 1.38667 19.1461 1.66337 18.7275Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="payment-company__content">
+                <div class="payment-company__name">Анастасия Василисовна</div>
+                <a href="#" class="payment-company__phone"
+                  >+7 (923) 100-01-05</a
+                >
+                <div class="payment-company__info">
+                  ООО «Мясоперерабатывающая компания»
+                </div>
+              </div>
+            </div>
+            <div class="paymnet-address">
+              <div class="paymnet-address__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="none"
+                >
+                  <path
+                    d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="paymnet-address__text">
+                ул. Ленина, дом 18, кв. 20 Прокопьевск, Кемеровская область –
+                Кузбасс, 630123
+              </div>
+            </div>
+            <div class="payment-details__btns">
+              <a href="#" class="payment-details__submit">Выбрать</a>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="payer-create">Создать платильщика</a>
+      </div>
+      <div id="change-payer" style="display: none">
+        <div class="change-address__title">Сменить платежные данные</div>
+        <ul class="payment-details__list">
+          <li class="payment-details__item selected">
+            <div class="payment-company">
+              <div class="payment-company__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="22"
+                  viewBox="0 0 20 22"
+                  fill="none"
+                >
+                  <path
+                    d="M4.25532 4.38991C4.1383 4.38991 4.04255 4.48073 4.04255 4.59174V5.80275C4.04255 5.91376 4.1383 6.00459 4.25532 6.00459H14.4681C14.5851 6.00459 14.6809 5.91376 14.6809 5.80275V4.59174C14.6809 4.48073 14.5851 4.38991 14.4681 4.38991H4.25532ZM9.14894 8.02294H4.25532C4.1383 8.02294 4.04255 8.11376 4.04255 8.22477V9.43578C4.04255 9.54679 4.1383 9.63761 4.25532 9.63761H9.14894C9.26596 9.63761 9.3617 9.54679 9.3617 9.43578V8.22477C9.3617 8.11376 9.26596 8.02294 9.14894 8.02294ZM7.87234 19.1835H1.91489V1.81651H17.1809V9.88991C17.1809 10.0009 17.2766 10.0917 17.3936 10.0917H18.883C19 10.0917 19.0957 10.0009 19.0957 9.88991V0.807339C19.0957 0.36078 18.7154 0 18.2447 0H0.851064C0.380319 0 0 0.36078 0 0.807339V20.1927C0 20.6392 0.380319 21 0.851064 21H7.87234C7.98936 21 8.08511 20.9092 8.08511 20.7982V19.3853C8.08511 19.2743 7.98936 19.1835 7.87234 19.1835ZM19.5745 17.3578H15.7447V16.4344C16.9761 16.0862 17.8723 15.0064 17.8723 13.7248C17.8723 12.1631 16.5399 10.8991 14.8936 10.8991C13.2473 10.8991 11.9149 12.1631 11.9149 13.7248C11.9149 15.0039 12.8112 16.0862 14.0426 16.4344V17.3578H10.2128C9.97872 17.3578 9.78723 17.5394 9.78723 17.7615V21.5963C9.78723 21.8183 9.97872 22 10.2128 22H19.5745C19.8085 22 20 21.8183 20 21.5963V17.7615C20 17.5394 19.8085 17.3578 19.5745 17.3578ZM13.5638 13.7248C13.5638 13.0284 14.1596 12.4633 14.8936 12.4633C15.6277 12.4633 16.2234 13.0284 16.2234 13.7248C16.2234 14.4211 15.6277 14.9862 14.8936 14.9862C14.1596 14.9862 13.5638 14.4211 13.5638 13.7248ZM18.3511 20.4358H11.4362V18.922H18.3511V20.4358Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="payment-company__content">
+                <div class="payment-company__name">ООО Название компании</div>
+                <a href="#" class="payment-company__phone"
+                  >+7 (923) 100-01-05</a
+                >
+                <div class="payment-company__info">ИНН 4444 8888 8888</div>
+              </div>
+            </div>
+            <div class="paymnet-address">
+              <div class="paymnet-address__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="none"
+                >
+                  <path
+                    d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="paymnet-address__text">
+                ул. Ленина, дом 18, кв. 20 Прокопьевск, Кемеровская область –
+                Кузбасс, 630123
+              </div>
+            </div>
+            <div class="payment-main">
+              <div class="payment-main__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="11"
+                  viewBox="0 0 22 11"
+                  fill="none"
+                >
+                  <path
+                    d="M1.5 5.5L5.5 9.5L13.5 1.5"
+                    stroke="#50575B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.5 8L13 9.5L21 1.5"
+                    stroke="#50575B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="payment-main__text">Основные реквизиты</div>
+            </div>
+            <div class="payment-details__btns">
+              <a href="#" class="payment-details__delete">Выбранные</a>
+            </div>
+          </li>
+          <li class="payment-details__item">
+            <div class="payment-company">
+              <div class="payment-company__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="22"
+                  viewBox="0 0 20 22"
+                  fill="none"
+                >
+                  <path
+                    d="M4.25532 4.38991C4.1383 4.38991 4.04255 4.48073 4.04255 4.59174V5.80275C4.04255 5.91376 4.1383 6.00459 4.25532 6.00459H14.4681C14.5851 6.00459 14.6809 5.91376 14.6809 5.80275V4.59174C14.6809 4.48073 14.5851 4.38991 14.4681 4.38991H4.25532ZM9.14894 8.02294H4.25532C4.1383 8.02294 4.04255 8.11376 4.04255 8.22477V9.43578C4.04255 9.54679 4.1383 9.63761 4.25532 9.63761H9.14894C9.26596 9.63761 9.3617 9.54679 9.3617 9.43578V8.22477C9.3617 8.11376 9.26596 8.02294 9.14894 8.02294ZM7.87234 19.1835H1.91489V1.81651H17.1809V9.88991C17.1809 10.0009 17.2766 10.0917 17.3936 10.0917H18.883C19 10.0917 19.0957 10.0009 19.0957 9.88991V0.807339C19.0957 0.36078 18.7154 0 18.2447 0H0.851064C0.380319 0 0 0.36078 0 0.807339V20.1927C0 20.6392 0.380319 21 0.851064 21H7.87234C7.98936 21 8.08511 20.9092 8.08511 20.7982V19.3853C8.08511 19.2743 7.98936 19.1835 7.87234 19.1835ZM19.5745 17.3578H15.7447V16.4344C16.9761 16.0862 17.8723 15.0064 17.8723 13.7248C17.8723 12.1631 16.5399 10.8991 14.8936 10.8991C13.2473 10.8991 11.9149 12.1631 11.9149 13.7248C11.9149 15.0039 12.8112 16.0862 14.0426 16.4344V17.3578H10.2128C9.97872 17.3578 9.78723 17.5394 9.78723 17.7615V21.5963C9.78723 21.8183 9.97872 22 10.2128 22H19.5745C19.8085 22 20 21.8183 20 21.5963V17.7615C20 17.5394 19.8085 17.3578 19.5745 17.3578ZM13.5638 13.7248C13.5638 13.0284 14.1596 12.4633 14.8936 12.4633C15.6277 12.4633 16.2234 13.0284 16.2234 13.7248C16.2234 14.4211 15.6277 14.9862 14.8936 14.9862C14.1596 14.9862 13.5638 14.4211 13.5638 13.7248ZM18.3511 20.4358H11.4362V18.922H18.3511V20.4358Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="payment-company__content">
+                <div class="payment-company__name">ООО Название компании</div>
+                <a href="#" class="payment-company__phone"
+                  >+7 (923) 100-01-05</a
+                >
+                <div class="payment-company__info">ИНН 4000 5000 6000</div>
+              </div>
+            </div>
+            <div class="paymnet-address">
+              <div class="paymnet-address__ico">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="none"
+                >
+                  <path
+                    d="M13.4615 0.179776L0.560233 6.55839C0.325299 6.67484 0.19565 6.93335 0.245297 7.19254C0.294447 7.45138 0.509986 7.64461 0.772354 7.66638L8.00488 8.25544L10.5347 15.0566C10.6269 15.3033 10.8714 15.4582 11.1338 15.4353C11.3031 15.4211 11.4523 15.3345 11.5498 15.2057C11.6035 15.1348 11.6417 15.0514 11.6587 14.9601L14.2965 0.811923C14.3369 0.59373 14.2511 0.371716 14.0743 0.237874C13.8975 0.104032 13.6605 0.0816524 13.4615 0.179776Z"
+                    fill="#50575B"
+                  />
+                </svg>
+              </div>
+              <div class="paymnet-address__text">
+                ул. Ленина, дом 18, кв. 20 Прокопьевск, Кемеровская область –
+                Кузбасс, 630123
+              </div>
+            </div>
+            <div class="payment-details__btns">
+              <a href="#" class="payment-details__submit">Выбрать</a>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="payer-create">Создать платильщика</a>
+      </div>
+    </div>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/yamap.js"></script>
+  </body>
+</html>

@@ -8,11 +8,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="fonts/font-awesome.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>hmru</title>
   </head>
-  <body>
+  <body class="personal">
     <div class="wrapper">
       <div class="mobile-header">
         <div class="container">
@@ -1392,104 +1399,367 @@
           <a href="/personal/cart/">Корзина</a>
         </div>
       </div>
+      <div class="personal-menu">
+        <button class="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="39"
+              height="39"
+              rx="5.5"
+              stroke="#2086CF"
+              stroke-opacity="0.1"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M26.3639 15.05L24.9497 13.6357L20 18.5854L15.0503 13.6357L13.6361 15.05L18.5858 19.9997L13.636 24.9495L15.0502 26.3637L20 21.4139L24.9498 26.3637L26.364 24.9495L21.4142 19.9997L26.3639 15.05Z"
+              fill="#2086CF"
+            />
+          </svg>
+        </button>
+        <ul>
+          <li class="has-sub-menu">
+            <div class="personal-menu__item">
+              <div class="personal-menu__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5 0H2C1.46954 0 0.960876 0.210938 0.585815 0.585938C0.210693 0.960938 0 1.46973 0 2V5H2V2H5V0ZM15 0V2H18V5H20V2C20 1.46973 19.7893 0.960938 19.4142 0.585938C19.0391 0.210938 18.5305 0 18 0H15ZM20 15H18V18H15V20H18C18.5305 20 19.0391 19.7891 19.4142 19.4141C19.7893 19.0391 20 18.5303 20 18V15ZM5 20V18H2V15H0V18C0 18.5303 0.210693 19.0391 0.585815 19.4141C0.781738 19.6099 1.0141 19.7612 1.26697 19.8608C1.49823 19.9521 1.74664 20 2 20H5ZM4 4H6V16H4V4ZM7 4H8V16H7V4ZM15 4H16V16H15V4ZM11 4H14V16H11V4ZM9 4H10V16H9V4Z"
+                    fill="#303239"
+                  />
+                </svg>
+              </div>
+              <div class="personal-menu__text">Заказы</div>
+            </div>
+            <ul>
+              <li>
+                <a href="#">Активные заказы</a>
+              </li>
+              <li>
+                <a href="#">Все заказы</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="personal-menu__item">
+              <div class="personal-menu__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="18"
+                  viewBox="0 0 21 18"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19 0.0109191H0V2.01092H2.3L5.58 11.0109C5.78631 11.5945 6.16807 12.0999 6.67294 12.458C7.1778 12.816 7.78106 13.0092 8.4 13.0109H17V11.0109H8.4C8.19449 11.0108 7.99399 10.9474 7.8258 10.8293C7.6576 10.7112 7.52987 10.5442 7.46 10.3509L7 9.01092H16.28C16.714 9.01029 17.1361 8.86849 17.4824 8.60692C17.8288 8.34535 18.0806 7.97821 18.2 7.56092L20 1.28092C20.0406 1.1496 20.0538 1.01132 20.0386 0.874693C20.0234 0.738071 19.9802 0.606049 19.9117 0.48687C19.8432 0.367692 19.7509 0.263917 19.6404 0.182026C19.53 0.100135 19.4039 0.0418868 19.27 0.0109191C19.1806 -0.0036397 19.0894 -0.0036397 19 0.0109191ZM16.25 7.01092H6.25L4.43 2.01092H17.67L16.25 7.01092ZM8.5 17.0109C9.32843 17.0109 10 16.3393 10 15.5109C10 14.6824 9.32843 14.0109 8.5 14.0109C7.67157 14.0109 7 14.6824 7 15.5109C7 16.3393 7.67157 17.0109 8.5 17.0109ZM16 15.5109C16 16.3393 15.3284 17.0109 14.5 17.0109C13.6716 17.0109 13 16.3393 13 15.5109C13 14.6824 13.6716 14.0109 14.5 14.0109C15.3284 14.0109 16 14.6824 16 15.5109Z"
+                    fill="#303239"
+                  />
+                </svg>
+              </div>
+              <div class="personal-menu__text">Мои товары</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="personal-menu__item">
+              <div class="personal-menu__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2 0H18C19.103 0 20 0.896973 20 2V15C20 16.103 19.103 17 18 17H13L10 20L7 17H2C0.896973 17 0 16.103 0 15V2C0 0.896973 0.896973 0 2 0ZM10 17L12 15H18.002L18 2H2V15H8L10 17ZM12 6C12 7.15198 11.1509 8 10 8C8.8501 8 8 7.15198 8 6C8 4.84802 8.8501 4 10 4C11.1509 4 12 4.84802 12 6ZM6 12.6C6 10.6121 7.79102 9 10 9C12.209 9 14 10.6121 14 12.6V12.986H6V12.6Z"
+                    fill="#303239"
+                  />
+                </svg>
+              </div>
+              <div class="personal-menu__text">Профиль</div>
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="container">
         <div class="breadcrumbs">
           <a href="/" title="Главная"> Главная </a>
           <span>/</span>
-          <a href="#" title="Каталог оборудования"> Каталог оборудования </a>
+          <a href="#" title="Каталог оборудования"> Адреса доставок</a>
+          <span>/</span>
+          <a href="#" title="Каталог оборудования"> Платёжные данные</a>
         </div>
       </div>
       <main>
         <div class="container">
-          <div class="progress-head">Работа выполнена на <span></span></div>
-          <div
-            class="progress-bar"
-            style="background-color: lightblue; border-radius: 10px"
-          >
-            <div
-              class="progress-bar__inner"
-              style="
-                background-color: green;
-                height: 15px;
-                margin-top: 20px;
-                border-radius: 10px;
-              "
-            ></div>
+          <div class="personal-head">
+            <button class="personal-burger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="39"
+                  height="39"
+                  rx="5.5"
+                  stroke="#303239"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M12 14H28V16H12V14ZM12 19H28V21H12V19ZM12 24H28V26H12V24Z"
+                  fill="#303239"
+                />
+              </svg>
+            </button>
+            <h2>Оформление заказа</h2>
           </div>
-
-          <ul class="work-progress">
-            <li class="done">
-              <a href="catalog.html">Каталог</a>
-            </li>
-            <li class="done">
-              <a href="payment-details.html">Платежные данные</a>
-            </li>
-            <li class="done">
-              <a href="payment-details-form.html">Новые платежные данные</a>
-            </li>
-            <li class="done">
-              <a href="delivery-address.html">Адреса доставок</a>
-            </li>
-            <li class="done">
-              <a href="delivery-form.html">Добавить адрес</a>
-            </li>
-            <li class="done">
-              <a href="personal-data.html">Личные данные</a>
-            </li>
-            <li class="done">
-              <a href="active-orders.html">Активные заказы</a>
-            </li>
-            <li class="done">
-              <a href="cart.html">Корзина</a>
-            </li>
-            <li class="done">
-              <a href="order.html">Оформление заказа</a>
-            </li>
-            <li class="done">
-              <a href="confirmed-order.html">Оформлен заказ № 274-663001</a>
-            </li>
-            <li class="done">
-              <a href="notifications.html">Уведомления</a>
-            </li>
-          </ul>
+          <h1 class="notifications-heading">Уведолмения</h1>
+          <div class="notification-buttons">
+            <div class="notifications-tabs">
+              <button class="notifications-tab" data-tab="notifications">
+                Уведомления
+              </button>
+              <button class="notifications-tab" data-tab="news">Новости</button>
+            </div>
+            <button class="notifications-delete">
+              Удалить все уведомления
+            </button>
+          </div>
+          <div class="notification-content">
+            <div class="notifications-list" data-tab="notifications">
+              <div class="notifications-item new">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+            </div>
+            <div class="notifications-list news" data-tab="news">
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+              <div class="notifications-item">
+                <div class="notifications-text">
+                  <p>
+                    По вашему заказу <span>№ 274-663001</span> выставлен счет на
+                    оплату. <a href="#">Скачать счет на оплату</a>
+                  </p>
+                </div>
+                <div class="notifications-date">
+                  <div class="notifications-date__ico"></div>
+                  <div class="notifications-date__text">Сегодня</div>
+                  <button class="notification-delete">Удалить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="agent">
+            <div class="agent-head">
+              <div class="agent-logo">
+                <img src="images/agent-img.png" alt="" />
+              </div>
+              <div class="agent-text">
+                <div class="agent-text__name">Анастасия Игоревна</div>
+                <div class="agent-text__post">Представитель HMRU</div>
+              </div>
+            </div>
+            <div class="agent-body">
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M18 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0ZM18 4.7L10 10.034L2 4.7V2.297L10 7.63L18 2.297V4.7Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">anastasia@hmru.ru</div>
+              </a>
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22ZM7.22789 5.04397C7.55102 5.05703 7.71275 5.07645 7.92605 5.58727C7.99625 5.7567 8.09316 5.99185 8.19917 6.24907C8.49363 6.96354 8.85824 7.84822 8.91536 7.96739C8.99288 8.12912 9.07056 8.34912 8.96056 8.56242C8.86434 8.76701 8.77942 8.86518 8.63792 9.02873C8.62726 9.04105 8.61628 9.05374 8.60495 9.06688C8.53558 9.14746 8.46742 9.21965 8.39941 9.29168C8.30902 9.3874 8.21892 9.48282 8.12663 9.59728L8.11904 9.60617C7.97235 9.77814 7.81304 9.96491 7.99738 10.2827C8.18472 10.5997 8.83114 11.6536 9.78161 12.5006C10.9098 13.5042 11.8415 13.881 12.2615 14.0508C12.2988 14.0659 12.3321 14.0794 12.3611 14.0915C12.6261 14.2015 12.9431 14.1755 13.137 13.9686C13.3469 13.7421 13.5992 13.3881 13.8618 13.0196C13.9066 12.9568 13.9516 12.8935 13.9968 12.8304C14.2165 12.52 14.4944 12.4812 14.7854 12.591C15.0828 12.6945 16.6539 13.4705 16.977 13.6322C17.0431 13.6653 17.1045 13.6949 17.1612 13.7222C17.3817 13.8282 17.5294 13.8992 17.5911 14.0072C17.6688 14.143 17.6688 14.7833 17.4038 15.5335C17.1385 16.2834 16.0848 16.9045 15.2443 17.0855C14.669 17.2082 13.919 17.3054 11.3912 16.2578C8.3978 15.0179 6.39119 12.1089 5.98235 11.5162C5.9497 11.4689 5.92724 11.4363 5.91528 11.4205C5.91076 11.4143 5.90539 11.407 5.89924 11.3985C5.69401 11.1179 4.60938 9.63484 4.60938 8.10283C4.60938 6.5694 5.3667 5.79946 5.70592 5.45459C5.71574 5.44461 5.72521 5.43498 5.7343 5.4257C5.9995 5.15414 6.43898 5.03125 6.85939 5.03125C6.99534 5.03125 7.11789 5.03761 7.22789 5.04397Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">8 (800) 500-1-495</div>
+              </a>
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="19"
+                    viewBox="0 0 22 19"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.214 0.215944L0.723048 7.96788C-0.0612952 8.32885 -0.326588 9.05182 0.533438 9.44415L5.53376 11.083L17.6238 3.37682C18.2839 2.89302 18.9597 3.02203 18.3782 3.55421L7.99447 13.2508L7.66828 17.3544C7.97041 17.988 8.5236 17.991 8.87644 17.6761L11.7493 14.8725L16.6694 18.6723C17.8121 19.3701 18.4339 18.9198 18.6798 17.641L21.907 1.88064C22.242 0.306414 21.6706 -0.387185 20.214 0.215944Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">anastasia@hmru.ru</div>
+              </a>
+            </div>
+          </div>
         </div>
       </main>
     </div>
-
-    <style>
-      .work-progress {
-        padding: 0;
-        margin-top: 30px;
-        list-style-type: none;
-      }
-
-      .work-progress li {
-        margin-bottom: 10px;
-      }
-
-      .work-progress li a {
-        color: red;
-      }
-
-      .work-progress .done a {
-        color: green;
-      }
-
-      .work-progress .in-progress a {
-        color: rgb(138, 124, 46);
-      }
-    </style>
-
     <script src="js/jquery-3.7.0.min.js"></script>
-    <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
       integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/work-progress.js"></script>
   </body>
 </html>

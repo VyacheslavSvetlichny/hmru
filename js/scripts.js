@@ -89,25 +89,6 @@ $(function () {
     localStorage.setItem('catalog-view', $(this).attr('data-catalog-view'))
   })
 
-  const popularSlider = new Swiper('.catalog-popular__container', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 2.25,
-      },
-
-      576: {
-        slidesPerView: 2.25,
-      },
-
-      992: {
-        slidesPerView: 3,
-      },
-    },
-  })
-
   $(function () {
     $('.news-form__input input').each(function () {
       $(this).on('input', function () {
@@ -155,7 +136,7 @@ $(function () {
   })
 
   $(function () {
-    $('.active-orders__item').click(function () {
+    $('.active-orders__list .active-orders__item').click(function () {
       $(this).children('.active-orders__additional').slideToggle()
       $(this).toggleClass('active')
     })
@@ -177,6 +158,7 @@ $(function () {
     $('.select__head').removeClass('open')
     $(this).parent().fadeOut()
     $(this).parent().prev().text($(this).text())
+    $(this).parent().prev().prev().val($(this).children().text())
   })
 
   $(document).click(function (e) {
@@ -184,5 +166,144 @@ $(function () {
       $('.select__head').removeClass('open')
       $('.select__list').fadeOut()
     }
+  })
+
+  $(document).ready(function () {
+    $('.cart-counter__plus').on('click', function () {
+      var input = $(this).siblings('.cart-counter__input')
+
+      var currentValue = parseInt(input.val())
+      input.val(currentValue + 1)
+      calculateTotal()
+    })
+
+    $('.cart-counter__minus').on('click', function () {
+      var input = $(this).siblings('.cart-counter__input')
+      var currentValue = parseInt(input.val())
+      if (currentValue > 1) {
+        input.val(currentValue - 1)
+        calculateTotal()
+      }
+    })
+
+    $('.cart-counter__input').on('change', function () {
+      var input = $(this)
+      var currentValue = parseInt(input.val())
+      if (currentValue > 0) {
+        calculateTotal()
+      }
+    })
+
+    function calculateTotal() {
+      var totalQuantity = 0
+      var totalPrice = 0
+      $('.cart-item').each(function () {
+        var price = parseInt($(this).find('.cart-item__price span').text())
+        var quantity = parseInt($(this).find('.cart-counter__input').val())
+        totalQuantity += quantity
+        totalPrice += price * quantity
+      })
+      $('.cart-menu__price span').text(totalPrice.toLocaleString('ru-RU'))
+      $('.cart-menu__title span').text(totalQuantity)
+    }
+  })
+
+  $(function () {
+    $('.delivery-type__tab:first-child').addClass('active')
+    $('.delivery-type__content:first-child').addClass('active')
+  })
+
+  $(document).on('click', '.delivery-type__tab', function () {
+    $('.delivery-type__tab').removeClass('active')
+    $(this).addClass('active')
+    $('.delivery-type__content').removeClass('active')
+    $(
+      `.delivery-type__content[data-delivery="${$(this).attr(
+        'data-delivery',
+      )}"`,
+    ).addClass('active')
+  })
+
+  $(document).click(function (e) {
+    $('.delivery-radio__tooltip').click(function () {
+      $(this).children('.delivery-radio__tooltip-body').fadeIn()
+    })
+
+    if (!$(e.target).closest('.delivery-company__item').length) {
+      $('.delivery-radio__tooltip-body').fadeOut()
+    }
+  })
+
+  $(function () {
+    $('.pick-up__item:first-child').addClass('active')
+  })
+
+  $(document).on('click', '.pick-up__select .select__item', function () {
+    $('.pick-up__item').removeClass('active')
+    $(`.pick-up__item[data-point="${$(this).attr('data-point')}"`).addClass(
+      'active',
+    )
+  })
+
+  $(document).on('click', '.order-next', function () {
+    $('.delivery-type[data-order-stage="1"]').removeClass('active')
+    $('.delivery-type[data-order-stage="2"]').addClass('active')
+  })
+
+  $(document).on('click', '.order-back', function () {
+    $('.delivery-type[data-order-stage="2"]').removeClass('active')
+    $('.delivery-type[data-order-stage="1"]').addClass('active')
+  })
+
+  $('.notifications-tab:first-child').addClass('active')
+  $('.notifications-list:first-child').addClass('active')
+
+  $(document).on('click', '.notifications-tab', function () {
+    $('.notifications-tab').removeClass('active')
+    $(this).addClass('active')
+    $('.notifications-list').removeClass('active')
+    $(`.notifications-list[data-tab="${$(this).attr('data-tab')}"`).addClass(
+      'active',
+    )
+  })
+
+  $(function () {
+    const popularSlider = new Swiper('.catalog-popular__container', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 2.25,
+        },
+
+        576: {
+          slidesPerView: 2.25,
+        },
+
+        992: {
+          slidesPerView: 3,
+        },
+      },
+    })
+
+    const deliveryCompanySlider = new Swiper('.delivery-company', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      loop: false,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+        },
+
+        576: {
+          slidesPerView: 2.5,
+        },
+
+        992: {
+          slidesPerView: 3,
+        },
+      },
+    })
   })
 })

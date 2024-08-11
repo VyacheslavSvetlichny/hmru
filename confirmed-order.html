@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>hmru</title>
   </head>
-  <body>
+  <body class="personal">
     <div class="wrapper">
       <div class="mobile-header">
         <div class="container">
@@ -1401,85 +1401,347 @@
       </div>
       <main>
         <div class="container">
-          <div class="progress-head">Работа выполнена на <span></span></div>
-          <div
-            class="progress-bar"
-            style="background-color: lightblue; border-radius: 10px"
-          >
-            <div
-              class="progress-bar__inner"
-              style="
-                background-color: green;
-                height: 15px;
-                margin-top: 20px;
-                border-radius: 10px;
-              "
-            ></div>
+          <div class="personal-head">
+            <button class="personal-burger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="39"
+                  height="39"
+                  rx="5.5"
+                  stroke="#303239"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M12 14H28V16H12V14ZM12 19H28V21H12V19ZM12 24H28V26H12V24Z"
+                  fill="#303239"
+                />
+              </svg>
+            </button>
+            <h1>Оформлен заказ № 274-663001</h1>
           </div>
-
-          <ul class="work-progress">
-            <li class="done">
-              <a href="catalog.html">Каталог</a>
-            </li>
-            <li class="done">
-              <a href="payment-details.html">Платежные данные</a>
-            </li>
-            <li class="done">
-              <a href="payment-details-form.html">Новые платежные данные</a>
-            </li>
-            <li class="done">
-              <a href="delivery-address.html">Адреса доставок</a>
-            </li>
-            <li class="done">
-              <a href="delivery-form.html">Добавить адрес</a>
-            </li>
-            <li class="done">
-              <a href="personal-data.html">Личные данные</a>
-            </li>
-            <li class="done">
-              <a href="active-orders.html">Активные заказы</a>
-            </li>
-            <li class="done">
-              <a href="cart.html">Корзина</a>
-            </li>
-            <li class="done">
-              <a href="order.html">Оформление заказа</a>
-            </li>
-            <li class="done">
-              <a href="confirmed-order.html">Оформлен заказ № 274-663001</a>
-            </li>
-            <li class="done">
-              <a href="notifications.html">Уведомления</a>
-            </li>
-          </ul>
+          <div class="confirmed-order__description">
+            <p>
+              Ваш заказ успешно сформирован. Вы выбрали оплату с помощью
+              выставления счета. В ближайшее время ваш менеджер зарезервирует
+              товар и сформирует счет на оплату, а вам поступит уведомление на
+              почту и в личном кабинете.
+            </p>
+            <p>
+              Состояние ваших заказов вы можете увидеть во вкладке
+              <span>Активные заказы</span> в личном кабинете
+            </p>
+          </div>
+          <div class="active-orders__list">
+            <div class="active-orders__item">
+              <div class="active-orders__content">
+                <div class="active-orders__content_top">
+                  <div class="active-orders__number">№ 211-711600</div>
+                  <div class="active-orders__created">Создан: 01.02.2023</div>
+                  <div class="active-orders__arrow">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="7"
+                      viewBox="0 0 12 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M1 1L6 6L11 1"
+                        stroke="#303239"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="active-orders__delivery">
+                  <div class="active-orders__delivery-status">
+                    Подтверждение
+                  </div>
+                  <div
+                    class="active-orders__delivery-progress"
+                    style="width: 30%"
+                  ></div>
+                </div>
+                <div class="active-orders__content_middle">
+                  <div class="active-orders__delivery-type">
+                    Курьерская доставка
+                  </div>
+                  <a href="!#" class="active-orders__documents">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 20H5C2.79086 20 1 18.2091 1 16V8C1 5.79086 2.79086 4 5 4H12C14.2091 4 16 5.79086 16 8V16C16 18.2091 14.2091 20 12 20Z"
+                        stroke="#2483DC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M7 16H5"
+                        stroke="#2483DC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M12 8H5"
+                        stroke="#2483DC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M10 12H5"
+                        stroke="#2483DC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <circle
+                        cx="17"
+                        cy="5"
+                        r="4"
+                        fill="#F23131"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                    </svg>
+                    Документы
+                  </a>
+                </div>
+                <div class="active-orders__content_bottom">
+                  <div class="active-orders__price">380 600 ₽</div>
+                  <div class="active-orders__payment">
+                    <div class="active-orders__payment-status">Не оплачен</div>
+                    <div class="active-orders__payment-progress"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="active-orders__additional">
+                <div class="active-orders__info">
+                  <div class="active-orders__about">
+                    <div class="active-orders__about-item">
+                      <div class="active-orders__about-left">Состояние:</div>
+                      <div class="active-orders__about-right">
+                        Товар собирается на складе
+                      </div>
+                    </div>
+                    <div class="active-orders__about-item">
+                      <div class="active-orders__about-left">Адрес:</div>
+                      <div class="active-orders__about-right">
+                        630012, Новосибирск, ул. Тюленина, дом 54, офис 400
+                      </div>
+                    </div>
+                    <div class="active-orders__about-item">
+                      <div class="active-orders__about-left">Отправлен:</div>
+                      <div class="active-orders__about-right">
+                        10.06.2023 в 16:40
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="active-orders__list-items">
+                  <div class="active-orders__list-title">Список товаров</div>
+                  <div class="active-orders__list-content">
+                    <div class="active-orders__list-item">
+                      <div class="active-orders__list-item_top">
+                        <div class="active-orders__list-item__image">
+                          <img src="images/goods-list.png" alt="" />
+                        </div>
+                        <a href="#" class="active-orders__list-item__title">
+                          Автоматическая тестораскаточная машина YP-520
+                        </a>
+                      </div>
+                      <div class="active-orders__list-item_bottom">
+                        <div class="active-orders__list-item__count">
+                          <div class="active-orders__list-item__count-title">
+                            Кол-во
+                          </div>
+                          <div class="active-orders__list-item__count-value">
+                            3
+                          </div>
+                        </div>
+                        <div class="active-orders__list-item__stock">
+                          <div class="active-orders__list-item__stock-title">
+                            Склад отгрузки
+                          </div>
+                          <div class="active-orders__list-item__stock-city">
+                            Новосибирск
+                          </div>
+                          <div class="active-orders__list-item__stock-value">
+                            В наличии
+                          </div>
+                        </div>
+                        <div class="active-orders__list-item__price">
+                          <div class="active-orders__list-item__price-title">
+                            Цена / шт
+                          </div>
+                          <div class="active-orders__list-item__price-value">
+                            12 253 437 ₽
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="active-orders__list-item">
+                      <div class="active-orders__list-item_top">
+                        <div class="active-orders__list-item__image">
+                          <img src="images/goods-list.png" alt="" />
+                        </div>
+                        <a href="#" class="active-orders__list-item__title">
+                          Автоматическая тестораскаточная машина YP-520
+                        </a>
+                      </div>
+                      <div class="active-orders__list-item_bottom">
+                        <div class="active-orders__list-item__count">
+                          <div class="active-orders__list-item__count-title">
+                            Кол-во
+                          </div>
+                          <div class="active-orders__list-item__count-value">
+                            3
+                          </div>
+                        </div>
+                        <div class="active-orders__list-item__stock">
+                          <div class="active-orders__list-item__stock-title">
+                            Склад отгрузки
+                          </div>
+                          <div class="active-orders__list-item__stock-city">
+                            Новосибирск
+                          </div>
+                          <div class="active-orders__list-item__stock-value">
+                            В наличии
+                          </div>
+                        </div>
+                        <div class="active-orders__list-item__price">
+                          <div class="active-orders__list-item__price-title">
+                            Цена / шт
+                          </div>
+                          <div class="active-orders__list-item__price-value">
+                            12 253 437 ₽
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="active-orders__delivery-item">
+                      <div class="active-orders__delivery-ico">
+                        <img src="images/sdek.png" alt="" />
+                      </div>
+                      <div class="active-orders__delivery-name">
+                        Курьерская доставка до двери ТК «СДЕК»
+                      </div>
+                      <div class="active-orders__delivery-price">
+                        <div class="active-orders__delivery-price__title">
+                          Стоимость
+                        </div>
+                        <div class="active-orders__delivery-price__value">
+                          Бесплатно
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="active-orders__total">
+            <div class="active-orders__total-title">Итого в заказе</div>
+            <div class="active-orders__total-count">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="20"
+                viewBox="0 0 19 20"
+                fill="none"
+              >
+                <path
+                  d="M9.25 8.5L1.75 5.125M9.25 8.5L16.75 5.125M9.25 8.5V18.25M8.00859 18.4357L2.17239 15.7829C1.45841 15.4584 1 14.7465 1 13.9622V6.03783C1 5.25354 1.45841 4.54163 2.17239 4.21709L8.42239 1.37618C8.94824 1.13716 9.55176 1.13716 10.0776 1.37618L16.3276 4.21709C17.0416 4.54163 17.5 5.25354 17.5 6.03783V13.9622C17.5 14.7465 17.0416 15.4584 16.3276 15.7829L10.4914 18.4357C9.70263 18.7943 8.79737 18.7943 8.00859 18.4357Z"
+                  stroke="#303239"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span>107</span>
+            </div>
+            <div class="active-orders__total-price">12 420 600 ₽</div>
+          </div>
+          <div class="agent">
+            <div class="agent-head">
+              <div class="agent-logo">
+                <img src="images/agent-img.png" alt="" />
+              </div>
+              <div class="agent-text">
+                <div class="agent-text__name">Анастасия Игоревна</div>
+                <div class="agent-text__post">Представитель HMRU</div>
+              </div>
+            </div>
+            <div class="agent-body">
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M18 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0ZM18 4.7L10 10.034L2 4.7V2.297L10 7.63L18 2.297V4.7Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">anastasia@hmru.ru</div>
+              </a>
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22ZM7.22789 5.04397C7.55102 5.05703 7.71275 5.07645 7.92605 5.58727C7.99625 5.7567 8.09316 5.99185 8.19917 6.24907C8.49363 6.96354 8.85824 7.84822 8.91536 7.96739C8.99288 8.12912 9.07056 8.34912 8.96056 8.56242C8.86434 8.76701 8.77942 8.86518 8.63792 9.02873C8.62726 9.04105 8.61628 9.05374 8.60495 9.06688C8.53558 9.14746 8.46742 9.21965 8.39941 9.29168C8.30902 9.3874 8.21892 9.48282 8.12663 9.59728L8.11904 9.60617C7.97235 9.77814 7.81304 9.96491 7.99738 10.2827C8.18472 10.5997 8.83114 11.6536 9.78161 12.5006C10.9098 13.5042 11.8415 13.881 12.2615 14.0508C12.2988 14.0659 12.3321 14.0794 12.3611 14.0915C12.6261 14.2015 12.9431 14.1755 13.137 13.9686C13.3469 13.7421 13.5992 13.3881 13.8618 13.0196C13.9066 12.9568 13.9516 12.8935 13.9968 12.8304C14.2165 12.52 14.4944 12.4812 14.7854 12.591C15.0828 12.6945 16.6539 13.4705 16.977 13.6322C17.0431 13.6653 17.1045 13.6949 17.1612 13.7222C17.3817 13.8282 17.5294 13.8992 17.5911 14.0072C17.6688 14.143 17.6688 14.7833 17.4038 15.5335C17.1385 16.2834 16.0848 16.9045 15.2443 17.0855C14.669 17.2082 13.919 17.3054 11.3912 16.2578C8.3978 15.0179 6.39119 12.1089 5.98235 11.5162C5.9497 11.4689 5.92724 11.4363 5.91528 11.4205C5.91076 11.4143 5.90539 11.407 5.89924 11.3985C5.69401 11.1179 4.60938 9.63484 4.60938 8.10283C4.60938 6.5694 5.3667 5.79946 5.70592 5.45459C5.71574 5.44461 5.72521 5.43498 5.7343 5.4257C5.9995 5.15414 6.43898 5.03125 6.85939 5.03125C6.99534 5.03125 7.11789 5.03761 7.22789 5.04397Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">8 (800) 500-1-495</div>
+              </a>
+              <a href="#" class="agent-link">
+                <div class="agent-link__ico">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="19"
+                    viewBox="0 0 22 19"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.214 0.215944L0.723048 7.96788C-0.0612952 8.32885 -0.326588 9.05182 0.533438 9.44415L5.53376 11.083L17.6238 3.37682C18.2839 2.89302 18.9597 3.02203 18.3782 3.55421L7.99447 13.2508L7.66828 17.3544C7.97041 17.988 8.5236 17.991 8.87644 17.6761L11.7493 14.8725L16.6694 18.6723C17.8121 19.3701 18.4339 18.9198 18.6798 17.641L21.907 1.88064C22.242 0.306414 21.6706 -0.387185 20.214 0.215944Z"
+                      fill="#D5DFED"
+                    />
+                  </svg>
+                </div>
+                <div class="agent-link__text">anastasia@hmru.ru</div>
+              </a>
+            </div>
+          </div>
         </div>
       </main>
     </div>
-
-    <style>
-      .work-progress {
-        padding: 0;
-        margin-top: 30px;
-        list-style-type: none;
-      }
-
-      .work-progress li {
-        margin-bottom: 10px;
-      }
-
-      .work-progress li a {
-        color: red;
-      }
-
-      .work-progress .done a {
-        color: green;
-      }
-
-      .work-progress .in-progress a {
-        color: rgb(138, 124, 46);
-      }
-    </style>
-
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
     <script
@@ -1490,6 +1752,5 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/work-progress.js"></script>
   </body>
 </html>
