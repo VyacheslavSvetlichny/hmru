@@ -145,6 +145,12 @@ body {
   border-radius: 12px;
   border: 1px solid #e5f0fc;
   background: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-radius: 12px;
+    border: 1px solid #c4d9ee;
+  }
 
   &:not(:last-child) {
     margin-bottom: 18px;
@@ -156,12 +162,17 @@ body {
   }
 
   &.new {
-    border: 0;
+    border: 1px solid #fff;
     background: radial-gradient(
       136.67% 136.67% at 50% 50%,
       rgba(237, 242, 249, 0) 0%,
       #edf2f9 100%
     );
+
+    &:hover {
+      border-radius: 12px;
+      border: 1px solid #c4d9ee;
+    }
 
     .notifications-date__ico {
       background: #0f76d6;
@@ -439,6 +450,7 @@ body {
   }
 
   #search-popup {
+    display: block;
     position: fixed;
     opacity: 0;
     pointer-events: none;
@@ -1848,20 +1860,6 @@ body {
     border-radius: 80px;
     border-radius: 80px;
     border: 1px solid #bed0e0;
-  }
-
-  .delivery.payment-add {
-    border-radius: 10px;
-    border: 1px dashed #d5dfed;
-
-    .payment-add__text {
-      color: #383838;
-      text-align: center;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 22px; /* 157.143% */
-    }
   }
 
   #delete-modal {
